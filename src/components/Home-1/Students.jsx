@@ -85,7 +85,7 @@ const Students = () => {
             <Box
               sx={
                 {
-                  // height: "20rem",
+                  // height: "40rem",
                   // minHeight: "26rem",
                   // maxBlockSize: "26rem",
                   // maxHeight: "5rem",
@@ -94,10 +94,15 @@ const Students = () => {
             >
               <Swiper
                 navigation={true}
-                modules={[Navigation]}
+                pagination={{
+                  clickable: true,
+                }}
+                // clickable
+                modules={[Navigation, Pagination]}
                 className="mySwiper"
                 style={{
                   width: "100%",
+                  // height: "32rem",
                 }}
               >
                 {studentImgs.map((slide, index) => (
