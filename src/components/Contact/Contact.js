@@ -7,26 +7,29 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log(form.current);
 
-    emailjs
-      .sendForm(
-        "service_ceu5hkv",
-        "template_a7so1vy",
-        form.current,
-        "_22UFYmA1mhZDVrQc"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // alert(JSON.stringify(form.current, null, 4));
+    // emailjs
+    //   .sendForm(
+    //     "service_ceu5hkv",
+    //     "template_a7so1vy",
+    //     form.current,
+    //     "_22UFYmA1mhZDVrQc"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
     <section id="contact" className="contact-area">
+      <h1>hello</h1>
       <div className="container">
         <div className="row">
           <div className="col-xl-7 col-lg-8">

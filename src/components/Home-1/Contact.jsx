@@ -20,6 +20,7 @@ import {
   PhoneAndroid,
   Subject,
 } from "@mui/icons-material";
+import emailjs from "@emailjs/browser";
 
 const contactLabels = [
   "Full Name",
@@ -27,6 +28,13 @@ const contactLabels = [
   "Phone Number",
   "Subject",
   "Your Message",
+];
+const contactInputNames = [
+  "full_name",
+  "email_address",
+  "phone_number",
+  "subject",
+  "message",
 ];
 const contactIcons = [
   <PersonOutline />,
@@ -37,6 +45,28 @@ const contactIcons = [
 ];
 
 const Contact = () => {
+  const form = React.useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ceu5hkv",
+        "template_a7so1vy",
+        form.current,
+        "_22UFYmA1mhZDVrQc"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <footer className="contact" id="contact">
       {/* <Container maxWidth="xl"> */}
@@ -99,7 +129,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={6}>
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <Grid container spacing={4}>
                 {contactLabels.map((label, idx) => (
                   <Grid key={label} item xs={label === "Your Message" ? 12 : 6}>
@@ -119,6 +149,7 @@ const Contact = () => {
                             {contactIcons[idx]}
                           </InputAdornment>
                         }
+                        name={contactInputNames[idx]}
                       />
                     </FormControl>
                   </Grid>
