@@ -3,6 +3,8 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { IoPersonOutline } from "react-icons/io5";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -69,7 +71,7 @@ const Teachers = () => {
                         justifyContent: "center",
                       }}
                     >
-                      ?
+                      <IoPersonOutline />
                     </Box>
                     {/* <img src={img} alt="teacher-3" height={"100%"} /> */}
                     {/* <Box className="img-content">

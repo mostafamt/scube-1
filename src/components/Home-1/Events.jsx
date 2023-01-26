@@ -6,8 +6,8 @@ import { Container } from "@mui/system";
 
 const Events = () => {
   return (
-    <Box className="events">
-      <Container>
+    <Container>
+      <Box className="events">
         <Box className="event">
           <Typography className="sub-header" textAlign={"left"}>
             Events
@@ -58,8 +58,8 @@ const Events = () => {
             </li>
           </ul>
         </Box>
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 };
 

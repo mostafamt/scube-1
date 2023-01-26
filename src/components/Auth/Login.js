@@ -24,6 +24,7 @@ export default function Login() {
   const [stage, setStage] = useState(1);
   const [newPassword, setNewPassword] = useState("");
 
+  // const isLoggedIn = true;
   const isLoggedIn = useStore((state) => state.isLoggedIn);
   const login = useStore((state) => state.login);
   const error = useStore((state) => state.error);

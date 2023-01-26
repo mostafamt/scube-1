@@ -43,7 +43,7 @@ const Services = () => {
       <div className="container">
         {/* <Container> */}
         <Typography variant="h2" className="section-title" align="center">
-          What Services We Provide
+          What Services SCube Provides
         </Typography>
         <Grid container spacing={6}>
           <Grid item xs={8}>

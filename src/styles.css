@@ -18,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: red; */
-  background-color: #f4f4f4 !important;
+  background-color: #efefef !important;
   /* color: rgb(255, 144, 76); */
   box-sizing: border-box !important;
   -webkit-box-sizing: border-box;
@@ -28,6 +28,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* 
+background: #FC5C7D;
+background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  
+background: linear-gradient(to right, #6A82FB, #FC5C7D); 
+*/
 
 /* UTILITES */
 .section-title {
@@ -63,7 +69,22 @@ code {
   /* text-align: center; */
 }
 
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* APPBAR */
+.appbar {
+  width: 40rem;
+  /* border: 1px solid red; */
+}
+
+.MuiToolbar-root {
+  width: 80rem;
+}
+
 .list-items {
   list-style: none;
   display: flex;
@@ -96,6 +117,51 @@ code {
   color: #fff;
 }
 
+.school-logo-box {
+  flex-grow: 18;
+  /* border: 1px solid red; */
+}
+
+.school-logo {
+  height: 5rem;
+}
+
+.scube-logo {
+  height: 5rem;
+}
+
+.silk-text {
+  font-family: "Bubblegum Sans", "cursive" !important;
+  color: #d4af37;
+  font-size: 3rem !important;
+}
+
+@media only screen and (min-width: 1576px) {
+  .MuiToolbar-root {
+    width: 117rem !important;
+  }
+  .list-item {
+    padding: 3rem 1rem;
+  }
+
+  .school-logo {
+    height: 8rem;
+  }
+
+  .scube-logo {
+    height: 8rem;
+  }
+
+  .silk-text {
+    font-size: 6rem !important;
+    line-height: 3rem !important;
+    /* padding: 2rem 0; */
+  }
+
+  .list-item {
+    font-size: 1.4rem !important;
+  }
+}
 /* Why Scube */
 .why-scube {
   padding: 4rem 2rem;
@@ -213,7 +279,27 @@ code {
   background-color: #fff;
   padding: 4rem 0;
   color: #555;
+  /* color: #fff; */
   position: relative;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* opacity: 0.15; */
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.video {
+  height: 100%;
+  width: 100;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .story .arrow-img {
@@ -273,6 +359,21 @@ code {
 }
 
 /* EVENTS */
+.events {
+  display: flex;
+  height: 100%;
+  /* border: 1px solid black; */
+  flex-direction: column;
+
+  gap: 24rem;
+}
+
+@media only screen and (min-width: 1576px) {
+  .events {
+    gap: 16rem;
+  }
+}
+
 .events .event {
   margin-bottom: 2rem;
 }
@@ -537,15 +638,15 @@ code {
 
 .contact .sun-img {
   position: absolute;
-  top: 47%;
-  left: 73%;
+  top: 42%;
+  left: 70%;
   height: 8rem;
   padding: 0;
 }
 
 .contact .pencil-boy {
   position: absolute;
-  top: 70%;
+  top: 68%;
   left: 75%;
   height: 6rem;
   padding: 0;
@@ -633,7 +734,7 @@ code {
 }
 
 .contact .school-info img {
-  width: 9rem;
+  width: 9.5rem;
   align-self: center;
   transform: translateX(-1rem);
 }
@@ -643,12 +744,6 @@ code {
   padding: 1rem;
   margin-top: 2rem;
   text-align: center;
-}
-
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* .my-button {
@@ -721,5 +816,18 @@ code {
 }
 
 .css-19kzrtu {
-  padding: 1rem 0 !important ;
+  /* background: #fc5c7d;
+  background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
+  background: linear-gradient(to right, #6a82fb, #fc5c7d); */
+  background-color: #ff8b8b;
+  color: #000;
+  /* color: white; */
+  /* color: white; */
+  border-radius: 0 0 5px 5px;
+}
+
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-t1sord-MuiButtonBase-root-MuiTab-root[tabindex="0"] {
+  background-color: #ff8b8b;
+  color: #000;
+  font-weight: 600;
 }

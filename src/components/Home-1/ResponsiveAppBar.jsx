@@ -63,15 +63,26 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      position="sticky"
+      position="static"
       sx={{
         // backgroundColor: "#FFF",
         backgroundImage:
           "linear-gradient(135deg, rgb(32, 167, 172) 11%, rgb(33, 138, 174) 49%, rgb(24, 42, 115) 100% )",
       }}
+      className="appbar"
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <div className="container">
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: {
+              xl: "104rem",
+              lg: "80rem",
+            },
+          }}
+        >
           <Box
             sx={{
               flexGrow: 10,
@@ -79,7 +90,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <img src="/assets/scube.png" alt="logo" height="80" />
+            <img src="/assets/scube.png" alt="logo" className="scube-logo" />
           </Box>
           <Box
             sx={{
@@ -88,15 +99,7 @@ function ResponsiveAppBar() {
             }}
           >
             {/* <img src="/assets/silk-logo.png" alt="slik" height={"80"} /> */}
-            <Typography
-              sx={{
-                fontFamily: "'Bubblegum Sans', cursive",
-                color: "#D4AF37",
-                fontSize: "3rem",
-              }}
-            >
-              SILK MS
-            </Typography>
+            <Typography className="silk-text">SILK MS</Typography>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -167,12 +170,16 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box
+            className="school-logo-box"
             sx={{
-              flexGrow: 18,
               display: { xs: "none", md: "flex" },
             }}
           >
-            <img src="/assets/school-logo.png" alt="school-logo" height="72" />
+            <img
+              src="/assets/school-logo.png"
+              alt="school-logo"
+              className="school-logo"
+            />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -228,7 +235,7 @@ function ResponsiveAppBar() {
             )}
           </Box>
         </Toolbar>
-      </Container>
+      </div>
     </AppBar>
   );
 }

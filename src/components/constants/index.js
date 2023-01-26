@@ -38,7 +38,7 @@ export const SliderImages = [
   "/assets/collection.png",
   "/assets/idea-1.jpg",
   "/assets/idea-2.jpg",
-  "/assets/idea-3.webp",
+  "/assets/idea-3.jpg",
   "/assets/idea-4.jpg",
   // "/assets/2.png",
   // "/assets/3.png",

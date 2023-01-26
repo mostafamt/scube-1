@@ -1,0 +1,72 @@
+:root {
+  --primay: #317773;
+  --secondary: #e2d1f9;
+}
+
+.tabs {
+  /* padding: 1rem 0.5rem 0 0; */
+  padding: 1rem 0;
+  /* height: 5rem; */
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+.panels {
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+  width: 70rem;
+  gap: 10%;
+  padding: 0 3rem 0 0;
+  transition: transform 1s;
+  margin: 0;
+}
+
+.panel {
+  /* width: 50rem ; */
+  width: 100%;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  text-align: justify;
+  padding: 1rem;
+  /* background-color: chartreuse; */
+  /* background-color: #317773; */
+}
+
+/* .panel:fir */
+
+.panel:first-child {
+  background-color: var(--primay);
+  color: var(--secondary);
+}
+
+.panel:last-child {
+  background-color: var(--secondary);
+  color: var(--primay);
+}
+
+.buttons {
+  padding: 0;
+  margin: 0;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.buttons button.active:first-child {
+  background-color: var(--primay);
+  color: var(--secondary);
+}
+
+.buttons button.active:last-child {
+  background-color: var(--secondary);
+  color: var(--primay);
+}
+
+/* Lavender #E2D1F9, Teal #317773 */

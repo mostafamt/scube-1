@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Grid as MGrid } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2"; // Grid version 2
 
+import { IoPersonOutline } from "react-icons/io5";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
@@ -115,7 +117,7 @@ const Students = () => {
                             justifyContent: "center",
                           }}
                         >
-                          ?
+                          <IoPersonOutline />
                         </Box>
                         {/* <img src={img} alt="student" />
                         <Box className="img-content">
