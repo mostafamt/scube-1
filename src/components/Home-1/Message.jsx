@@ -132,26 +132,26 @@ const Story = () => {
                       margin: 0,
                     }}
                   >
-                    Our vision is to initiate and lead the science of
-                    Intelligent e- Learning and to pioneer and constantly grow
-                    to become the lead exporter of innovative Intelligent
-                    e-Learning technologies worldwide, and to become a leading
-                    performer in the competitive global marketplace of
-                    developing Intelligent solutions for the equitable access of
-                    lifelong learners (LLL) including those vulnerable and
-                    underserved.
+                    Our mission is to provide our students with high quality
+                    learning full of joy and enthusiasm and prepare them to
+                    become the leaders of the future; hence, offering the
+                    parents with serenity and contentment about the future of
+                    their children. Our continuously improving work process
+                    mandates employment of advanced technologies and innovative
+                    intelligent solutions to maximize the cost- benefit and
+                    improve the Efficiency, Efficacy, and Engagement of the
+                    Learning system. Our learning system follow the contemporary
+                    theories and new teaching paradigms to guarantee a top-level
+                    satisfaction and high learning outcomes.
                   </TabPanel>
                   <TabPanel value={value} index={1}>
-                    Our mission is to provide our customers with high quality
-                    innovative intelligent solutions with maximized cost-
-                    benefit and expedited ROI via improving the Efficiency,
-                    Efficacy, and Engagement of the Learning systems. Our work
-                    processes and products lifecycle seamlessly integrate
-                    research and development for continuously exploring new
-                    innovative improvements and ideas to guarantee continuous
-                    evolution of the learning systems, while our products follow
-                    the contemporary theories and paradigm shifts to guarantee a
-                    top-level satisfaction of our end- users (the learners).
+                    “The children of today are the leaders of tomorrow” is our
+                    vision on which is centred our school system with all of its
+                    components with an eye on continuous maximization of the
+                    learning outcomes: very competent teachers, creative
+                    facilities, innovative teaching system, school activities,
+                    with a special attention on recruiting advanced innovative
+                    technologies.
                   </TabPanel>
                 </Box>
               </Box>

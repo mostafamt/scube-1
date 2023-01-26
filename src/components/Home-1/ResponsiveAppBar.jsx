@@ -89,6 +89,7 @@ function ResponsiveAppBar() {
               display: { xs: "none", md: "flex" },
               textDecoration: "none",
             }}
+            className="scube-box"
           >
             <img src="/assets/scube.png" alt="logo" className="scube-logo" />
           </Box>
@@ -97,6 +98,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
             }}
+            className="silk-box"
           >
             {/* <img src="/assets/silk-logo.png" alt="slik" height={"80"} /> */}
             <Typography className="silk-text">SILK MS</Typography>
@@ -155,6 +157,7 @@ function ResponsiveAppBar() {
               flexGrow: 4,
               display: { xs: "none", md: "flex" },
             }}
+            className="nav-box"
           >
             <ul className="list-items">
               {displayPages.map((page, idx) => (

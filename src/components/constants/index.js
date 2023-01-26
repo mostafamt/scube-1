@@ -45,7 +45,7 @@ export const SliderImages = [
   // "/assets/4.png",
 ];
 export const SliderHeaders = [
-  "IPS",
+  "IPS Zahraa Nasr City",
   "School Activities",
   "Get the maximum value",
   "Fun Learning",
@@ -56,7 +56,7 @@ export const SliderHeaders = [
   // "SCube is Different",
 ];
 export const SliderText = [
-  "International Public School",
+  "International Public School Zahraa Nasr City",
   "Some activities at the school",
   "The teacher is with you in the classroom for teaching and SCube goes with you to home for studying and learning",
   "Fun learning, no more tears",

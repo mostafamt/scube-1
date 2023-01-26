@@ -92,7 +92,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <MailOutlineOutlined />
-                    sales@scube-edutech.com
+                    info@scube-edutech.com
                   </li>
                 </ul>
               </Box>
