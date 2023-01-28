@@ -130,28 +130,34 @@ const Story = () => {
                     sx={{
                       padding: 0,
                       margin: 0,
+                      textAlign: "justify",
                     }}
                   >
-                    Our mission is to provide our students with high quality
-                    learning full of joy and enthusiasm and prepare them to
-                    become the leaders of the future; hence, offering the
-                    parents with serenity and contentment about the future of
-                    their children. Our continuously improving work process
-                    mandates employment of advanced technologies and innovative
-                    intelligent solutions to maximize the cost- benefit and
-                    improve the Efficiency, Efficacy, and Engagement of the
-                    Learning system. Our learning system follow the contemporary
-                    theories and new teaching paradigms to guarantee a top-level
-                    satisfaction and high learning outcomes.
+                    <Typography textAlign={"justify"}>
+                      “The children of today are the leaders of tomorrow” is our
+                      vision on which is centred our school system with all of
+                      its components with an eye on continuous maximization of
+                      the learning outcomes: very competent teachers, creative
+                      facilities, innovative teaching system, school activities,
+                      with special attention on recruiting advanced innovative
+                      technologies.
+                    </Typography>
                   </TabPanel>
                   <TabPanel value={value} index={1}>
-                    “The children of today are the leaders of tomorrow” is our
-                    vision on which is centred our school system with all of its
-                    components with an eye on continuous maximization of the
-                    learning outcomes: very competent teachers, creative
-                    facilities, innovative teaching system, school activities,
-                    with a special attention on recruiting advanced innovative
-                    technologies.
+                    <Typography textAlign={"justify"}>
+                      Our mission is to provide our students with high quality
+                      learning full of joy and enthusiasm and prepare them to
+                      become the leaders of the future; hence, offering the
+                      parents with serenity and contentment about the future of
+                      their children. Our continuously improving work process
+                      mandates employment of advanced technologies and
+                      innovative intelligent solutions to maximize the cost-
+                      benefit and improve the Efficiency, Efficacy, and
+                      Engagement of the Learning system. Our learning system
+                      follow the contemporary theories and new teaching
+                      paradigms to guarantee a top-level satisfaction and high
+                      learning outcomes.
+                    </Typography>
                   </TabPanel>
                 </Box>
               </Box>
