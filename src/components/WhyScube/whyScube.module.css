@@ -54,7 +54,7 @@
   flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1377px) {
+@media only screen and (width < 1920px) {
   .whyScubeContent {
     flex-direction: column;
     gap: 6rem;

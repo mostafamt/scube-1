@@ -8,11 +8,13 @@ import Students from "./Students";
 import Teachers from "./Teachers";
 import Contact from "./Contact";
 import WhyScube from "../WhyScube/WhyScube";
+import Menu from "../Menu/Menu";
 
 const Home = () => {
   return (
     <div>
-      <ResponsiveAppBar />
+      {/* <ResponsiveAppBar /> */}
+      <Menu />
       <Header />
       <WhyScube />
       <Message />

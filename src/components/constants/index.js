@@ -56,9 +56,6 @@ export const SliderHeaders = [
   "Fun Learning",
   "With the Adaptive/Personalized Learning of SCube، No more Private Tutoring",
   "Use your favorite language",
-  // "One Size Does Not Fit All",
-  // "Private Tutoring",
-  // "SCube is Different",
 ];
 export const SliderHeadersMansoura = [
   "IPS Mansoura",

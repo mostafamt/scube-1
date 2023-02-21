@@ -93,16 +93,15 @@ function ResponsiveAppBar() {
           >
             <img src="/assets/scube.png" alt="logo" className="scube-logo" />
           </Box>
-          <Box
+          {/* <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
             }}
             className="silk-box"
           >
-            {/* <img src="/assets/silk-logo.png" alt="slik" height={"80"} /> */}
             <Typography className="silk-text">SILK MS</Typography>
-          </Box>
+          </Box> */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

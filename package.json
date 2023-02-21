@@ -28,6 +28,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.8",
     "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.58.3",
     "swiper": "^8.4.6",
     "web-vitals": "^2.1.4",
     "zustand": "^4.1.1"

@@ -1,0 +1,59 @@
+.menu {
+  height: 10rem;
+  padding: 0 4rem;
+  background-image: linear-gradient(
+    135deg,
+    rgb(32, 167, 172) 11%,
+    rgb(33, 138, 174) 49%,
+    rgb(24, 42, 115) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+
+  & img {
+    height: 100%;
+    padding: 0.5rem 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  & ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0;
+
+    & li {
+      & a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 4rem 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  & .loginBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .menu {
+    height: 6rem;
+  }
+}
