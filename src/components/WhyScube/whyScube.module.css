@@ -1,0 +1,70 @@
+/* Why Scube */
+.whyScube {
+  padding: 4rem 2rem;
+  position: relative;
+  /* background-color: red; */
+  /* height: 80rem; */
+}
+
+.whyScubeCards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.whyScube .performance {
+  background-color: #fff;
+  padding: 0rem !important ;
+}
+
+.whyScube .progressbars {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.whyScubeContent {
+  display: flex;
+  gap: 2rem;
+}
+
+.whyScubeContentCards {
+  flex: 1 1 75%;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.whyScubeContentBars {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.performaceHeader {
+  text-align: center;
+}
+
+.bars {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1377px) {
+  .whyScubeContent {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .whyScubeContentCards {
+    gap: 4rem;
+  }
+
+  .bars {
+    gap: 4rem;
+  }
+}

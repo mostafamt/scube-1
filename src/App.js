@@ -14,7 +14,8 @@ import Profile from "./components/Profile/Profile";
 import Groups from "./components/Admin/Groups/Groups";
 import Layout from "../src/components/Layout/Layout";
 import Group from "./components/Admin/Groups/Group";
-import Home from "./components/Home-1/Home";
+// import Home from "./components/Home-1/Home";
+import Home from "./components/Home-2/Home";
 import "./styles.css";
 
 function App() {

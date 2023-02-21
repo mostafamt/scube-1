@@ -185,117 +185,6 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
     font-size: 1.4rem !important;
   }
 }
-/* Why Scube */
-.why-scube {
-  padding: 4rem 2rem;
-  position: relative;
-  /* background-color: red; */
-  /* height: 80rem; */
-}
-
-.why-scube-cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.why-scube-card {
-  text-align: center;
-  background-color: #fff;
-  /* min-width: 13rem; */
-  /* width: 13rem; */
-
-  /* width: 13rem; */
-  height: 100%;
-  padding: 2rem 1rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.4rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-  transform: scale(1.05);
-  color: #555;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.why-scube-card:hover {
-  transform: translateY(-8px) scale(1.1);
-  box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
-}
-
-.why-scube-card .MuiSvgIcon-root {
-  font-size: 3.4rem !important;
-  color: var(--teal) !important;
-  stroke: #fff;
-}
-
-.why-scube-card-header {
-  font-size: 1.3rem !important;
-  /* font-weight: 500 !important; */
-}
-
-.why-scube .performance {
-  background-color: #fff;
-  padding: 0rem !important ;
-}
-
-.why-scube .progressbars {
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* Performance */
-.performance {
-  background-color: #fff;
-  padding: 4rem;
-}
-
-.performance-header {
-  font-size: 2rem !important;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.performance .progressbars {
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.CircularProgressbar-text {
-  font-weight: 700;
-  transform: translate(2px, 4px);
-  font-size: 2rem !important;
-}
-
-.progressbar-title {
-  color: #333;
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-}
-
-.improvement-bullet {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 3px;
-  background-color: black;
-  transform: translateY(-2px);
-}
-
-.no-flickr {
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-}
 
 /* STORY */
 .story {
@@ -327,8 +216,8 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
 
 .story .arrow-img {
   position: absolute;
-  top: 22%;
-  left: 60%;
+  top: 20%;
+  left: 63%;
 }
 
 .story .img {
@@ -853,4 +742,11 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
   background-color: #ff8b8b;
   color: #000;
   font-weight: 600;
+}
+
+/*  */
+.CircularProgressbar .CircularProgressbar-text {
+  font-weight: 700;
+  transform: translate(2px, 4px);
+  font-size: 2rem !important;
 }
