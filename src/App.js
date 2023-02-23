@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import {
   createTheme,
   CssBaseline,
@@ -6,17 +6,25 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Auth/Login";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
+
+// import PageNotFound from "./components/PageNotFound/PageNotFound";
 // import Home from "./components/Home/Home"
-import Profile from "./components/Profile/Profile";
+// import Profile from "./components/Profile/Profile";
 // import HomePage from "./components/Home/HomePage";
-import Groups from "./components/Admin/Groups/Groups";
+// import Groups from "./components/Admin/Groups/Groups";
 import Layout from "../src/components/Layout/Layout";
-import Group from "./components/Admin/Groups/Group";
+// import Group from "./components/Admin/Groups/Group";
 // import Home from "./components/Home-1/Home";
 import Home from "./components/Home-2/Home";
 import "./styles.css";
+
+const Login = lazy(() => import("./components/Auth/Login"));
+const PageNotFound = lazy(() =>
+  import("./components/PageNotFound/PageNotFound")
+);
+const Profile = lazy(() => import("./components/Profile/Profile"));
+const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
+const Group = lazy(() => import("./components/Admin/Groups/Group"));
 
 function App() {
   let theme = createTheme({
@@ -30,37 +38,40 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+      <Suspense fallback={<p>Loading…</p>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
 
-        <Route
-          path="/profile"
-          element={
-            <Layout>
-              <Profile />
-            </Layout>
-          }
-        />
-        <Route
-          path="/groups"
-          element={
-            <Layout>
-              <Groups />
-            </Layout>
-          }
-        />
-        <Route
-          path="/group"
-          element={
-            <Layout>
-              <Group />
-            </Layout>
-          }
-        />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+          <Route path="/login" element={<Login />} />
+
+          <Route
+            path="/profile"
+            element={
+              <Layout>
+                <Profile />
+              </Layout>
+            }
+          />
+          <Route
+            path="/groups"
+            element={
+              <Layout>
+                <Groups />
+              </Layout>
+            }
+          />
+          <Route
+            path="/group"
+            element={
+              <Layout>
+                <Group />
+              </Layout>
+            }
+          />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Suspense>
     </ThemeProvider>
   );
 }

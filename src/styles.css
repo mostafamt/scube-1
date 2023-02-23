@@ -542,8 +542,8 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
 
 .contact .cloud-img-1 {
   position: absolute;
-  top: 55%;
-  left: 50%;
+  top: 50%;
+  left: 60%;
   height: 3rem;
   padding: 0;
 }
@@ -606,20 +606,38 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
 
 .contact .form-control {
   width: 100%;
-  color: inherit;
+  /* color: inherit; */
 }
 
-.contact .MuiInput-root {
-  color: inherit;
+.contact .MuiTextField-root {
+  /* color: inherit !important; */
 }
 
-.contact .MuiInput-root::before {
+.contact .MuiFormLabel-root {
+  color: white !important;
+}
+
+.contact .MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.contact .MuiInputBase-root {
+  color: white;
+}
+
+.contact .MuiTextField-root::before {
   border-color: #fff;
 }
 
 .contact form .MuiSvgIcon-root {
   font-size: 2rem;
   stroke: #555;
+}
+
+.contact
+  .MuiFormHelperText-root.Mui-error.MuiFormHelperText-sizeMedium.MuiFormHelperText-contained {
+  color: #ff726f;
+  font-weight: bold;
 }
 
 .contact .list {

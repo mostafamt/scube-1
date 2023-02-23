@@ -1,76 +1,21 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Input,
-  InputAdornment,
-  Typography,
-} from "@mui/material";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import {
   LocalPhoneOutlined,
   LocationOnOutlined,
-  MailOutline,
   MailOutlineOutlined,
-  MessageOutlined,
-  PersonOutline,
-  PhoneAndroid,
-  Subject,
 } from "@mui/icons-material";
-import emailjs from "@emailjs/browser";
-
-const contactLabels = [
-  "Full Name",
-  "Email Address",
-  "Phone Number",
-  "Subject",
-  "Your Message",
-];
-const contactInputNames = [
-  "full_name",
-  "email_address",
-  "phone_number",
-  "subject",
-  "message",
-];
-const contactIcons = [
-  <PersonOutline />,
-  <MailOutline />,
-  <PhoneAndroid />,
-  <Subject />,
-  <MessageOutlined />,
-];
+import Form from "../Form/Form";
 
 const Contact = () => {
-  const form = React.useRef();
+  const [emailSent, setEmailSent] = React.useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_ceu5hkv",
-        "template_a7so1vy",
-        form.current,
-        "_22UFYmA1mhZDVrQc"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  const onToggleEmailSent = () => {
+    setEmailSent(!emailSent);
   };
 
   return (
     <footer className="contact" id="contact">
-      {/* <Container maxWidth="xl"> */}
-      {/* <img src="/assets/footer-bg-1.png" alt="footer" /> */}
       <div className="container">
         <Typography variant="h2" className="section-title">
           Get in Touch
@@ -128,50 +73,29 @@ const Contact = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={6}>
-            <form ref={form} onSubmit={sendEmail}>
-              <Grid container spacing={4}>
-                {contactLabels.map((label, idx) => (
-                  <Grid key={label} item xs={label === "Your Message" ? 12 : 6}>
-                    <FormControl variant="standard" className="form-control">
-                      <InputLabel
-                        htmlFor="input-with-icon-adornment"
-                        sx={{ color: "#fff" }}
-                      >
-                        {label}
-                      </InputLabel>
-                      <Input
-                        id="input-with-icon-adornment"
-                        multiline={label === "Your Message" ? true : false}
-                        rows={label === "Your Message" ? 3 : null}
-                        startAdornment={
-                          <InputAdornment position="start">
-                            {contactIcons[idx]}
-                          </InputAdornment>
-                        }
-                        name={contactInputNames[idx]}
-                      />
-                    </FormControl>
-                  </Grid>
-                ))}
-                <Grid item xs={12} textAlign="center">
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    sx={{
-                      backgroundColor: "#fff",
-                      color: "rgb(25, 118, 210)",
-
-                      "&:hover": {
-                        color: "#fff",
-                      },
-                    }}
-                  >
-                    Send Message
-                  </Button>
-                </Grid>
-              </Grid>
-            </form>
+          <Grid
+            item
+            xs={6}
+            sx={{
+              alignSelf: emailSent ? "center" : "flex-end",
+            }}
+          >
+            {!emailSent ? (
+              <Form toggleEmailSent={onToggleEmailSent} />
+            ) : (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <p>Your message has sent Successfully</p>
+                <Button variant="contained" onClick={onToggleEmailSent}>
+                  Send another message
+                </Button>
+              </div>
+            )}
           </Grid>
           <Grid item xs={3} className="school-info">
             <img src="/assets/mansoura-logo.png" alt="school-logo" />
