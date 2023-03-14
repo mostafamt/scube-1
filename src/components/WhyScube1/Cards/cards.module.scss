@@ -1,0 +1,20 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  // flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+@media only screen and (max-width: 1900px) {
+  .cards {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}

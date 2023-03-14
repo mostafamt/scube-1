@@ -31,10 +31,13 @@
 }
 
 .whyScubeContentCards {
+  border: 1px solid red;
+  padding: 2rem 0;
   flex: 1 1 75%;
   display: flex;
-  gap: 4rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 4rem; */
+  /* flex-wrap: wrap; */
 }
 
 .whyScubeContentBars {

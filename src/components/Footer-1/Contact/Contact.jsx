@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   Button,
   FormControl,
@@ -7,7 +9,7 @@ import {
   InputLabel,
   TextField,
 } from "@mui/material";
-import React from "react";
+
 import {
   MailOutline,
   MessageOutlined,
@@ -19,6 +21,8 @@ import * as Yup from "yup";
 
 import emailjs, { init } from "@emailjs/browser";
 import { Formik } from "formik";
+
+import styles from "./contact.module.scss";
 
 const contactLabels = [
   "Full Name",
@@ -48,7 +52,7 @@ const initialValues = {
 
 const phoneRegExp = /^01[0125][0-9]{8}$/;
 
-const Form = ({ toggleEmailSent }) => {
+const Contact = () => {
   const validationSchema = Yup.object({
     name: Yup.string().required("You must provide a name"),
     email: Yup.string().email().required("You must provide a valid email"),
@@ -82,11 +86,10 @@ const Form = ({ toggleEmailSent }) => {
         console.log(error.text);
       }
     );
-    toggleEmailSent();
   };
 
   return (
-    <div>
+    <div className={styles.contact}>
       <Formik
         initialValues={initialValues}
         onSubmit={(values, { setSubmitting }) => {
@@ -109,8 +112,16 @@ const Form = ({ toggleEmailSent }) => {
             <Grid container spacing={4}>
               {contactLabels.map((label, idx) => (
                 <Grid key={label} item xs={label === "Your Message" ? 12 : 6}>
-                  <FormControl variant="standard" className="form-control">
+                  <FormControl
+                    variant="standard"
+                    className={styles.formControl}
+                  >
                     <TextField
+                      sx={{
+                        color: "#FFF !important",
+                        borderColor: "#FFF !important",
+                      }}
+                      className={styles.input}
                       // focused
                       id="input-with-icon-adornment"
                       multiline={label === "Your Message" ? true : false}
@@ -162,4 +173,4 @@ const Form = ({ toggleEmailSent }) => {
   );
 };
 
-export default Form;
+export default Contact;

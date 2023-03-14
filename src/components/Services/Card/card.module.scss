@@ -1,0 +1,33 @@
+@import "/src/index.scss";
+
+.card {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  text-align: center;
+
+  & > div:first-child {
+    & > svg {
+      font-size: 3.4rem;
+      stroke: #fff;
+      fill: $teal-color;
+    }
+  }
+
+  & h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  & p {
+    text-align: justify;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,19 @@
+.message {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: justify;
+  color: #555;
+
+  & > h4 {
+    font-size: 1.4rem !important ;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem !important;
+    font-weight: 100 !important;
+    /* text-align: center; */
+  }
+}

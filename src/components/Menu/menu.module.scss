@@ -1,59 +1,167 @@
-.menu {
-  height: 10rem;
-  padding: 0 4rem;
+.menu-box {
   background-image: linear-gradient(
     135deg,
     rgb(32, 167, 172) 11%,
     rgb(33, 138, 174) 49%,
     rgb(24, 42, 115) 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
 
-  & img {
-    height: 100%;
-    padding: 0.5rem 0;
-  }
-
-  & a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  & ul {
-    height: 100%;
-    list-style: none;
+  & .menu {
+    height: 10rem;
     display: flex;
     align-items: center;
-    text-transform: uppercase;
-    padding: 0;
+    justify-content: space-between;
+    color: #fff;
 
-    & li {
-      & a {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 4rem 1rem;
-        font-size: 1.4rem;
-        font-weight: 400;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.2);
+    & img {
+      height: 100%;
+      padding: 0.5rem 0;
+    }
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    & ul {
+      height: 100%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding: 0;
+
+      & li {
+        & a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 4rem 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
         }
       }
     }
-  }
 
-  & .loginBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    & .loginBox {
+      & > button {
+        background-image: radial-gradient(
+          100% 100% at 100% 0,
+          #5adaff 0,
+          var(--teal) 100%
+        );
+        border: 0;
+        border-radius: 6px;
+        box-shadow: rgba(228, 226, 232, 0.4) 0 2px 4px,
+          rgba(126, 109, 162, 0.3) 0 7px 13px -3px,
+          rgba(162, 164, 177, 0.5) 0 -3px 0 inset;
+        color: #fff;
+        cursor: pointer;
+        transition: box-shadow 0.15s, transform 0.15s;
+        font-size: 1.125rem;
+        font-family: "Roboto", sans-serif;
+        padding: 0.75rem 1.5rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:focus {
+          box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+        }
+
+        &:hover {
+          box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          box-shadow: #3c4fe0 0 3px 7px inset;
+          transform: translateY(2px);
+        }
+      }
+    }
+
+    & .sandwich {
+      display: none;
+    }
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  .menu {
-    height: 6rem;
+  .menu-box {
+    & .menu {
+      height: 6rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .menu-box {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    & .menu {
+      & ul {
+        display: none;
+      }
+
+      & .sandwich {
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        & svg {
+          fill: #fff;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      & img {
+        height: 100%;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-box {
+    & .menu {
+      & img {
+        height: 75%;
+        padding: 0.5rem 0;
+      }
+    }
+
+    & .loginBox {
+      & > button {
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .menu-box {
+    & .man-img {
+      display: none;
+    }
+
+    & .loginBox {
+      & > button {
+        font-size: 0.85rem !important;
+        padding: 0.75rem 0.5rem !important;
+      }
+    }
   }
 }

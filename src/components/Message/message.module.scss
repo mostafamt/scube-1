@@ -1,0 +1,147 @@
+@import "/src/index.scss";
+
+.background {
+  background-color: #fff;
+}
+
+.message {
+  padding: 4rem 0 !important;
+  color: #555;
+  overflow: hidden;
+
+  & > h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem 0 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    letter-spacing: 6px;
+    color: #555;
+
+    &:after {
+      display: block;
+      height: 2px;
+      background-color: var(--teal);
+      content: "";
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div:first-child {
+      flex: 0 1 65%;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      & > img {
+        width: 16rem;
+        // align-self: flex-start;
+      }
+
+      & > div {
+        padding: 0;
+
+        & > p:first-child {
+          margin-top: 0;
+        }
+
+        & > p {
+          margin: 0.5rem 0;
+          text-align: justify;
+        }
+      }
+    }
+
+    & > div:last-child {
+      flex: 0 1 30%;
+
+      & > h2 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin: 0 0 0.5rem;
+        font-weight: 400;
+      }
+
+      & > .tabs {
+        & > div:nth-child(1) {
+          & > div > div > div > button {
+            &:active {
+              background-color: $teal-color;
+            }
+            &:last-child {
+              // background-color: $pink-color;
+              // color: #fff;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          background-color: $teal-color;
+          color: #fff;
+          border-radius: 0 0 0.5rem 0.5rem;
+        }
+        & > div:nth-child(3) {
+          background-color: $teal-color;
+          color: #fff;
+          border-radius: 0 0 0.5rem 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .message {
+    &-body {
+      flex-direction: column;
+      row-gap: 4rem;
+      width: 100%;
+
+      & > div:last-child {
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+
+        & .tabs {
+          & > div:nth-child(1) {
+            & > div > div > div {
+              justify-content: center;
+            }
+          }
+          & > div:nth-child(2),
+          & > div:nth-child(3) {
+            width: 100%;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .message {
+    &-body {
+      & > div:first-child {
+        flex-direction: column;
+
+        & > img {
+          border-radius: 50%;
+          // transform: translateX(-2%);
+        }
+        & > div {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}

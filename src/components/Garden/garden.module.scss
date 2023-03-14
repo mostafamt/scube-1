@@ -1,0 +1,29 @@
+.garden {
+  position: relative;
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+
+  & .girl {
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    height: 10rem;
+    z-index: 1;
+  }
+
+  & > .boy {
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    height: 10rem;
+    z-index: 1;
+  }
+
+  & > img:last-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}

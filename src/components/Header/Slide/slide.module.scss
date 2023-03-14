@@ -1,0 +1,40 @@
+.slide {
+  height: 80vh;
+  color: black;
+  background-position: center center;
+  background-size: cover;
+  position: relataive;
+  border-bottom: 2px solid #555;
+
+  &__info {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .slide {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slide {
+    height: 60vh;
+
+    &__info {
+      h5 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

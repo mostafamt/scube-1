@@ -1,0 +1,30 @@
+.card {
+  // align-self: flex-start;
+  background-color: #fff;
+  width: 17rem;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+
+  & > div:first-child > svg {
+    font-size: 3.4rem !important;
+    color: var(--teal) !important;
+    stroke: #fff;
+  }
+
+  & > h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  & > p {
+    text-align: justify;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+  }
+}

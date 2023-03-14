@@ -1,0 +1,45 @@
+:root {
+  --teal-color: #0594a9;
+  --pink-color: #ff8b8b;
+}
+$teal-color: var(--teal-color);
+$pink-color: var(--pink-color);
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1300px !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .container {
+    width: 1850px !important;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

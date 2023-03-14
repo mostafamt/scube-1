@@ -1,0 +1,30 @@
+.progressbar {
+  // display: flex;
+
+  & .circular {
+    width: 8rem;
+  }
+
+  & .progressbarTitle {
+    color: #333;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  & .improvementBullet {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 3px;
+    transform: translateY(-2px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .progressbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,37 @@
+.bars {
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li {
+      flex: 0 1 50%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .bars {
+    & > h2 {
+      text-align: center;
+    }
+
+    & > ul {
+      justify-content: center;
+      gap: 3rem;
+      & > li {
+        flex: 0 1 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bars {
+    & > ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

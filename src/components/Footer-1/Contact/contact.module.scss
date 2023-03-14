@@ -1,0 +1,14 @@
+.contact {
+  padding: 1rem 0;
+  & .input {
+    color: white !important;
+
+    & > * {
+      color: white !important;
+    }
+  }
+
+  & .formControl {
+    width: 100%;
+  }
+}

@@ -7,24 +7,19 @@ import {
 } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
-// import PageNotFound from "./components/PageNotFound/PageNotFound";
-// import Home from "./components/Home/Home"
-// import Profile from "./components/Profile/Profile";
-// import HomePage from "./components/Home/HomePage";
-// import Groups from "./components/Admin/Groups/Groups";
-import Layout from "../src/components/Layout/Layout";
-// import Group from "./components/Admin/Groups/Group";
-// import Home from "./components/Home-1/Home";
+// import Layout from "../src/components/Layout/Layout";
 import Home from "./components/Home-2/Home";
 import "./styles.css";
 
-const Login = lazy(() => import("./components/Auth/Login"));
-const PageNotFound = lazy(() =>
-  import("./components/PageNotFound/PageNotFound")
-);
-const Profile = lazy(() => import("./components/Profile/Profile"));
-const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
-const Group = lazy(() => import("./components/Admin/Groups/Group"));
+import "./index.scss";
+
+// const Login = lazy(() => import("./components/Auth/Login"));
+// const PageNotFound = lazy(() =>
+//   import("./components/PageNotFound/PageNotFound")
+// );
+// const Profile = lazy(() => import("./components/Profile/Profile"));
+// const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
+// const Group = lazy(() => import("./components/Admin/Groups/Group"));
 
 function App() {
   let theme = createTheme({
@@ -43,7 +38,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
 
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} />
 
           <Route
             path="/profile"
@@ -69,7 +64,7 @@ function App() {
               </Layout>
             }
           />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} /> */}
         </Routes>
       </Suspense>
     </ThemeProvider>

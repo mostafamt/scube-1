@@ -1,0 +1,138 @@
+@import "/src/index.scss";
+
+.services {
+  padding: 4rem 0 !important;
+  color: #555;
+  overflow: hidden;
+
+  & > h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem 0 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    letter-spacing: 6px;
+    color: #555;
+
+    &:after {
+      display: block;
+      height: 2px;
+      background-color: var(--teal);
+      content: "";
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    & .cards {
+      flex: 0 1 65%;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 1.2rem;
+
+      & > li {
+        width: 16rem;
+      }
+    }
+
+    & .sidebar {
+      flex: 0 1 30%;
+      display: flex;
+      flex-direction: column;
+
+      & h2 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin: 0 0 0.5rem;
+        font-weight: 400;
+      }
+
+      & .events {
+        flex: 0 1 50%;
+        margin-top: 1.5rem;
+      }
+
+      & ul {
+        & li {
+          display: flex;
+          align-items: center;
+          margin: 1rem 0;
+
+          & svg {
+            height: 1.25rem;
+            width: 1.25rem;
+            color: #fff;
+            background-color: $teal-color;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            padding: 0.2rem;
+            -webkit-transition: background-image 2s ease-in-out;
+            transition: background-image 2s ease-in-out;
+
+            &:hover {
+              background-image: linear-gradient(
+                180deg,
+                rgb(255, 186, 17) 11%,
+                rgb(255, 168, 11) 49%,
+                rgb(255, 151, 6) 100%
+              );
+              -webkit-transition: background-image 2s ease-in-out;
+              transition: background-image 2s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .services {
+    &__body {
+      flex-direction: column;
+      gap: 3rem;
+
+      & .sidebar {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        & .events {
+          flex: 0 1 auto;
+          margin-top: 0;
+        }
+
+        & ul {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .services {
+    & .events {
+      width: 20rem;
+    }
+
+    & .news {
+      width: 20rem;
+    }
+
+    & .sidebar {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+      margin: 0 3rem;
+    }
+  }
+}
