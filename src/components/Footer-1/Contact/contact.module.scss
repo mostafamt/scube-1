@@ -1,10 +1,23 @@
 .contact {
   padding: 1rem 0;
-  & .input {
-    color: white !important;
 
-    & > * {
-      color: white !important;
+  & .input {
+    & svg {
+      fill: #fff !important;
+    }
+
+    & > label {
+      color: white;
+    }
+    & > div:last-child {
+      & > fieldset {
+        border-color: white;
+      }
+    }
+
+    & p {
+      color: lighten(#f00, 30%) !important;
+      font-weight: 600;
     }
   }
 

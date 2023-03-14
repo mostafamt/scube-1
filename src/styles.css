@@ -393,7 +393,7 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
   font-size: 2rem !important;
 }
 
-.css-1kesrjl-MuiInputBase-root-MuiOutlinedInput-root.Mui-error
+/* .css-1kesrjl-MuiInputBase-root-MuiOutlinedInput-root.Mui-error
   .MuiOutlinedInput-notchedOutline {
   border-color: #fff !important;
 }
@@ -405,9 +405,9 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
 
 .css-i4bv87-MuiSvgIcon-root {
   fill: #fff !important;
-}
+} */
 
-.css-1wc848c-MuiFormHelperText-root.Mui-error {
+/* .css-1wc848c-MuiFormHelperText-root.Mui-error {
   color: #fbb13c !important;
   font-weight: 600;
-}
+} */
