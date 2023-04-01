@@ -23,6 +23,8 @@ import emailjs, { init } from "@emailjs/browser";
 import { Formik } from "formik";
 
 import styles from "./contact.module.scss";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const contactLabels = [
   "Full Name",
@@ -52,7 +54,7 @@ const initialValues = {
 
 const phoneRegExp = /^01[0125][0-9]{8}$/;
 
-const Contact = () => {
+const Contact = ({ schoolName, to }) => {
   const validationSchema = Yup.object({
     name: Yup.string().required("You must provide a name"),
     email: Yup.string().email().required("You must provide a valid email"),
@@ -64,7 +66,7 @@ const Contact = () => {
     message: Yup.string().required("You must provide a message"),
   });
 
-  const handleSendEmail = (values) => {
+  const handleSendEmail = (values, resetForm) => {
     // e.preventDefault();
     init("XqECRd-2VulRx7Se1");
 
@@ -72,15 +74,44 @@ const Contact = () => {
 
     const form = {
       from_name: "Scube Education Technology",
-      to_name: "Mr Muhammad Saad Al-Wakil",
+      to_name: to,
       ...values,
     };
 
-    // alert(JSON.stringify("SENT !"));
+    const templateID =
+      schoolName === "znc" ? "template_uus9gfj" : "template_vzt8oh6";
 
-    emailjs.send("service_ivverlw", "template_vzt8oh6", form).then(
+    // alert(JSON.stringify("SENT !"));
+    // znc = template_uus9gfj
+    // mansoura = template_vzt8oh6
+
+    toast.success("✉️ Your email has been sent successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    resetForm();
+
+    emailjs.send("service_ivverlw", templateID, form).then(
       (result) => {
         console.log(result.text);
+
+        toast.success("✉️ Your email has been sent successfully", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        resetForm();
       },
       (error) => {
         console.log(error.text);
@@ -90,10 +121,11 @@ const Contact = () => {
 
   return (
     <div className={styles.contact}>
+      <ToastContainer />
       <Formik
         initialValues={initialValues}
-        onSubmit={(values, { setSubmitting }) => {
-          handleSendEmail(values);
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          handleSendEmail(values, resetForm);
           setSubmitting(false);
         }}
         validationSchema={validationSchema}
@@ -111,7 +143,12 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <Grid container spacing={4}>
               {contactLabels.map((label, idx) => (
-                <Grid key={label} item xs={label === "Your Message" ? 12 : 6}>
+                <Grid
+                  key={label}
+                  item
+                  xs={label === "Your Message" ? 12 : 12}
+                  md={label === "Your Message" ? 12 : 6}
+                >
                   <FormControl
                     variant="standard"
                     className={styles.formControl}

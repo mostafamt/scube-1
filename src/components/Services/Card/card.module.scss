@@ -8,6 +8,7 @@
   border-radius: 0.5rem;
   transition: all 0.3s;
   text-align: center;
+  margin: 0 auto;
 
   & > div:first-child {
     & > svg {
@@ -29,5 +30,13 @@
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    // border: 1px solid black;
+    height: 28rem;
+    width: 20rem;
   }
 }

@@ -38,13 +38,32 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D);
 /* UTILITES */
 .section-title {
   font-size: 2.4rem !important;
+  font-weight: 300;
   text-align: center;
   margin: 1rem 0 4rem !important;
   text-transform: uppercase;
   letter-spacing: 1rem;
   letter-spacing: 6px !important;
-  color: #555;
+  color: #555 !important ;
 }
+
+@media only screen and (max-width: 900px) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* @media only screen and (max-width: 400px) {
+  .section-title {
+    font-size: 1.2rem !important;
+  }
+} */
 
 .section-title:after {
   display: block;

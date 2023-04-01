@@ -4,25 +4,8 @@
   background-image: url(../../../public/assets/footer-bg-1.png);
   position: relative;
 
-  & > h2 {
-    font-size: 2.4rem;
-    font-weight: 300;
-    text-align: center;
-    margin: 1rem 0 4rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    letter-spacing: 6px;
-    color: #fff;
-
-    &:after {
-      display: block;
-      height: 2px;
-      background-color: var(--teal);
-      content: "";
-      width: 100px;
-      margin: 0 auto;
-      margin-top: 30px;
-    }
+  & h2 {
+    color: #fff !important;
   }
 
   & > div:nth-child(2) {

@@ -1,5 +1,9 @@
 .schoolInfo {
-  & img {
-    width: 50%;
+  & .img-box {
+    text-align: center;
+
+    & img {
+      width: 50%;
+    }
   }
 }

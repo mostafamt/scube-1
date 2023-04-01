@@ -9,10 +9,12 @@ import {
   QuestionAnswerOutlined,
 } from "@mui/icons-material";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import Slider from "react-slick";
 
 // import Card from "../WhyScube1/Cards/Card/Card";
 
 import styles from "./services.module.scss";
+import CardsContainer from "./CardsContainer/CardsContainer";
 
 const serviceCardIcons = [
   <LaptopMacOutlined />,
@@ -51,21 +53,68 @@ const events = [
 const news = ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"];
 
 const Services = () => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    appendDots: (dots) => (
+      <ul
+        style={{
+          listStyle: "none",
+          marginTop: "3rem",
+          right: 0,
+          bottom: "-40px",
+          display: "flex",
+          gap: ".15rem",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {dots}
+      </ul>
+    ),
+    customPaging: () => <div className={styles.grid_dot}></div>,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
   return (
     <section id="services" className={`container  ${styles.services}`}>
-      <h2>what services scube provides</h2>
+      <h2 className="section-title">what services scube provides</h2>
       <div className={styles.services__body}>
-        <ul className={styles.cards}>
-          {serviceCardTexts.map((card, idx) => (
-            <li key={idx}>
-              <Card
-                icon={serviceCardIcons[idx]}
-                title={serviceCardHeaders[idx]}
-                text={card}
-              />
-            </li>
-          ))}
-        </ul>
+        <div>
+          <CardsContainer />
+          <div className={styles.slider}>
+            <Slider {...settings}>
+              {serviceCardTexts.map((card, idx) => (
+                <Card
+                  icon={serviceCardIcons[idx]}
+                  title={serviceCardHeaders[idx]}
+                  text={card}
+                />
+              ))}
+            </Slider>
+          </div>
+        </div>
         <div className={styles.sidebar}>
           <div className={styles.events}>
             <h2>events</h2>

@@ -14,7 +14,7 @@ import Drawer from "../Drawer/Drawer";
 const items = ["scube", "why scube", "our message", "services", "contact"];
 const paths = ["header", "why-scube", "our-message", "services", "contact"];
 
-const Menu = () => {
+const Menu = ({ logo }) => {
   const [openDrawer, setOpenDrawer] = React.useState(false);
 
   const toggleDrawer = () => setOpenDrawer((prevState) => !prevState);
@@ -48,11 +48,7 @@ const Menu = () => {
                 </li>
               ))}
             </ul>
-            <img
-              src="/assets/mansoura-logo.png"
-              alt="mansoura-logo"
-              className={styles["man-img"]}
-            />
+            <img src={logo} alt="mansoura-logo" className={styles["man-img"]} />
             <div className={styles.loginBox}>
               <button onClick={() => navigate("/login")}>
                 <span>Login </span>

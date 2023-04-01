@@ -6,7 +6,7 @@ import SchoolInfo from "./SchoolInfo/SchoolInfo";
 import ScubeInfo from "./ScubeInfo/ScubeInfo";
 import Tail from "./Tail/Tail";
 
-const Footer = () => {
+const Footer = (props) => {
   const [emailSent, setEmailSent] = React.useState(false);
 
   const onToggleEmailSent = () => {
@@ -18,8 +18,8 @@ const Footer = () => {
       <h2 className="section-title">Get in Touch</h2>
       <div className="container">
         <ScubeInfo />
-        <Contact />
-        <SchoolInfo />
+        <Contact schoolName={props.schoolName} to={props.to} />
+        <SchoolInfo {...props} />
       </div>
       <Tail />
     </footer>

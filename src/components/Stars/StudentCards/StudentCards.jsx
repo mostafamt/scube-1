@@ -150,6 +150,20 @@ const StudentCards = (props) => {
         style={{
           height: "20rem",
         }}
+        breakpoints={{
+          300: {
+            width: 300,
+            slidesPerView: 1,
+          },
+          600: {
+            width: 600,
+            slidesPerView: 2,
+          },
+          900: {
+            width: 900,
+            slidesPerView: 3,
+          },
+        }}
       >
         <SwiperSlide>
           <div

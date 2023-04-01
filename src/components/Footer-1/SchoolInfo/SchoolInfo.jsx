@@ -8,23 +8,26 @@ import {
 
 import styles from "./schoolInfo.module.scss";
 
-const SchoolInfo = () => {
+const SchoolInfo = ({ info }) => {
+  const { img, address, phone, email } = info;
+
   return (
     <div className={styles.schoolInfo}>
-      <img src="/assets/mansoura-logo.png" alt="school-logo" />
+      <div className={styles["img-box"]}>
+        <img src={img} alt="school-logo" />
+      </div>
       <ul className="list">
         <li>
           <LocationOnOutlined />
-          Mansoura Alnakhla street - school compound - behind Dakahliya
-          Directorate of Education
+          {address}
         </li>
         <li>
           <LocalPhoneOutlined />
-          050 2218999
+          {phone}
         </li>
         <li>
           <MailOutlineOutlined />
-          ms_elwakil2003@yahoo.com
+          {email}
         </li>
       </ul>
     </div>

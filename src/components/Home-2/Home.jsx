@@ -18,22 +18,153 @@ import Students from "../Students/Students";
 import Teachers from "../Teachers/Teachers";
 import Garden from "../Garden/Garden";
 
-const Home = () => {
+const mansoura = {
+  logo: "/assets/mansoura-logo.png",
+  slides: [
+    {
+      title: "IPS Mansoura",
+      description: "International Public School Mansoura",
+      img: "/assets/mansoura-school-edited.jpg",
+    },
+    {
+      title: "School Activities",
+      description: "Some activities at the school",
+      img: "/assets/mansoura-activities.jpg",
+    },
+    {
+      title: "Get the maximum value",
+      description:
+        "The teacher is with you in the classroom for teaching and SCube goes with you to home for studying and learning",
+      img: "/assets/idea-1.jpg",
+    },
+    {
+      title: "Fun Learning",
+      description: "Fun learning, no more tears",
+      img: "/assets/mansoura-learning.jpg",
+    },
+    {
+      title:
+        "With the Adaptive/Personalized Learning of SCube، No more Private Tutoring",
+      description:
+        "SCube is the First e-Learning Platform that considers the individual learning differences for each learner",
+      img: "/assets/idea-3.jpg",
+    },
+    {
+      title: "Use your favorite language",
+      description:
+        "Use your favorite language when studying, SCube translates automatically",
+      img: "/assets/idea-4.jpg",
+    },
+  ],
+  message: {
+    img: "/assets/principal-1.jpg",
+    messages: [
+      "International Public Schools started as an educational project and its goal is for our children to get the distinguished education they deserve at an affordable cost.",
+      "Its goal is to build a person who is able to keep pace with development and is open to all cultures in the world while preserving the Egyptian identity and belonging to the land and soil of this country.",
+      "Our goal is a generation that faces the challenges and successive developments in a world where those who do not evolve and adapt to the developments of life are extinct.",
+      "To be a driving force for the advancement of our beloved country.",
+      "God save Egypt and save its people.🇪🇬",
+    ],
+    signature: {
+      gender: "Mr",
+      name: "Muhammad Saad Al-Wakil",
+    },
+    vision:
+      "To empower students to be future leaders to serve the community and keep the Egyptian identity.",
+    mission:
+      "We inspire and nurture students to be creative, critical thinkers and decision makers. Children will rise to be the challenge of life responsibly, confidently and ethically.",
+  },
+  info: {
+    img: "/assets/mansoura-logo.png",
+    address:
+      "Mansoura Alnakhla street - school compound - behind Dakahliya Directorate of Education",
+    phone: "050 2218999",
+    email: "ms_elwakil2003@yahoo.com",
+    to: "Mr Muhammad Saad Al-Wakil",
+  },
+};
+
+const znc = {
+  logo: "/assets/school-logo.png",
+  slides: [
+    {
+      title: "IPS Zahraa Nasr City",
+      description: "International Public School Zahraa Nasr City",
+      img: "/assets/school.jpg",
+    },
+    {
+      title: "School Activities",
+      description: "Some activities at the school",
+      img: "/assets/collection.png",
+    },
+    {
+      title: "Get the maximum value",
+      description:
+        "The teacher is with you in the classroom for teaching and SCube goes with you to home for studying and learning",
+      img: "/assets/idea-1.jpg",
+    },
+    {
+      title: "Fun Learning",
+      description: "Fun learning, no more tears",
+      img: "/assets/idea-2.jpg",
+    },
+    {
+      title:
+        "With the Adaptive/Personalized Learning of SCube، No more Private Tutoring",
+      description:
+        "SCube is the First e-Learning Platform that considers the individual learning differences for each learner",
+      img: "/assets/idea-3.jpg",
+    },
+    {
+      title: "Use your favorite language",
+      description:
+        "Use your favorite language when studying, SCube translates automatically",
+      img: "/assets/idea-4.jpg",
+    },
+  ],
+  message: {
+    img: "/assets/principal.jpg",
+    messages: [
+      "IPS ZNC School wishes you a very warm welcome to Our School. Our objective is to deliver excellent education by exceptional teachers in award winning facilities. We are making key strides towards creating a school that makes a significant difference to the community. The school hires the most competent teachers, constructs creative facilities and smart areas and labs, involves students with creative activities, etc. The school's objective is to get the maximum learning outcomes while enjoying studying and learning.",
+      "We target building a healthy relationship between our school and the students via offering our students with the best learning environments inside and outside the school. Therefore, the school hired several online learning management and support systems; among them is the knowledge management system, SCube's SILK MS. Our highly qualified teachers exert their maximum with our students inside the class and at the school, while SCube SILK MS and all other online systems cooperate together to offer our  students with a unique study environment at home.",
+      "Our goal is a generation that faces the challenges and successive developments in a world where those who do not evolve and adapt to the developments of life are extinct.",
+      "To be a driving force for the advancement of our beloved country.",
+      "God save Egypt and save its people.🇪🇬",
+    ],
+    signature: {
+      gender: "Mrs",
+      name: "Suzan Zakaria",
+    },
+    vision:
+      "The children of today are the leaders of tomorrow” is our vision on which is centred our school system with all of its components with an eye on continuous maximization of the learning outcomes: very competent teachers, creative facilities, innovative teaching system, school activities, with special attention on recruiting advanced innovative technologies.",
+    mission:
+      "Our mission is to provide our students with high quality learning full of joy and enthusiasm and prepare them to become the leaders of the future; hence, offering the parents with serenity and contentment about the future of their children. Our continuously improving work process mandates employment of advanced technologies and innovative intelligent solutions to maximize the cost-benefit and improve the Efficiency, Efficacy, and Engagement of the Learning system. Our learning system follow the contemporary theories and new teaching paradigms to guarantee a top-level satisfaction and high learning outcomes.",
+  },
+  info: {
+    img: "/assets/school-logo.png",
+    address:
+      "4000 Residences of the Armed Forces Officers - in front of Maj.Gen. Maged Saleh Mosque - Zahraa, Nasr City - Cairo",
+    phone: "02 23835443 - 010 2412 1784",
+    email: "ips.zahraanasrcity@gmail.com",
+    to: "Mrs Suzan Zakaria",
+  },
+};
+
+const Home = ({ schoolName }) => {
+  const data = schoolName === "znc" ? znc : mansoura;
+
   return (
-    <div>
-      <Menu />
-      <Header />
+    <>
+      <Menu logo={data.logo} />
+      <Header slides={data.slides} />
       <WhyScube />
-      <Message />
+      <Message message={data.message} />
       <Services />
       <Students />
       <Garden />
       <Teachers />
-      {/* <Footer /> */}
-      <Footer1 />
-
-      {/* <Contact /> */}
-    </div>
+      <Footer1 schoolName={schoolName} info={data.info} />
+    </>
   );
 };
 

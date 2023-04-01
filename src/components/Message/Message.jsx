@@ -30,50 +30,29 @@ function a11yProps(index) {
   };
 }
 
-const Message = () => {
+const Message = ({ message }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  const { img, messages, signature, vision, mission } = message;
+
   return (
     <div className={styles.background}>
       <div className={`container ${styles.message}`}>
-        <h2>Our Message</h2>
+        <h2 className="section-title">Our Message</h2>
 
         <div className={styles["message-body"]}>
           <div>
-            <img src="/assets/principal-1.jpg" alt="" />
+            <img src={img} alt="" />
             <div>
+              {messages.map((message, idx) => (
+                <p key={idx}>{message}</p>
+              ))}
               <p>
-                International Public Schools started as an educational project
-                and its goal is for our children to get the distinguished
-                education they deserve at an affordable cost.
-              </p>
-              <p>
-                Its goal is to build a person who is able to keep pace with
-                development and is open to all cultures in the world while
-                preserving the Egyptian identity and belonging to the land and
-                soil of this country.
-              </p>
-              <p>
-                Our goal is a generation that faces the challenges and
-                successive developments in a world where those who do not evolve
-                and adapt to the developments of life are extinct.
-              </p>
-              <p>
-                Our goal is a generation that faces the challenges and
-                successive developments in a world where those who do not evolve
-                and adapt to the developments of life are extinct.
-              </p>
-              <p>
-                To be a driving force for the advancement of our beloved
-                country.
-              </p>
-              God save Egypt and save its people.🇪🇬
-              <p>
-                Mr <strong>Muhammad Saad Al-Wakil</strong> , Principal
+                {signature.gender} <strong>{signature.name}</strong> , Principal
               </p>
             </div>
           </div>
@@ -106,17 +85,10 @@ const Message = () => {
                   height: "6rem",
                 }}
               >
-                <Typography textAlign={"justify"}>
-                  To empower students to be future leaders to serve the
-                  community and keep the Egyptian identity.
-                </Typography>
+                <Typography textAlign={"justify"}>{vision}</Typography>
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Typography textAlign={"justify"}>
-                  We inspire and nurture students to be creative, critical
-                  thinkers and decision makers. Children will rise to be the
-                  challenge of life responsibly, confidently and ethically.
-                </Typography>
+                <Typography textAlign={"justify"}>{mission}</Typography>
               </TabPanel>
             </div>
           </div>

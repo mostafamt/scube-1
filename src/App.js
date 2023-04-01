@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 
 // import Layout from "../src/components/Layout/Layout";
 import Home from "./components/Home-2/Home";
+// import Home from "./components/Home-1/Home";
 import "./styles.css";
 
 import "./index.scss";
@@ -20,6 +21,9 @@ import "./index.scss";
 // const Profile = lazy(() => import("./components/Profile/Profile"));
 // const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
 // const Group = lazy(() => import("./components/Admin/Groups/Group"));
+
+// toggle between ['znc', 'mansoura']
+const schoolName = "znc";
 
 function App() {
   let theme = createTheme({
@@ -35,8 +39,8 @@ function App() {
       <CssBaseline />
       <Suspense fallback={<p>Loading…</p>}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home schoolName={schoolName} />} />
+          <Route path="/home" element={<Home schoolName={schoolName} />} />
 
           {/* <Route path="/login" element={<Login />} />
 

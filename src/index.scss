@@ -13,6 +13,7 @@ $pink-color: var(--pink-color);
 }
 @media (min-width: 768px) {
   .container {
+    padding: 0 15px;
     width: 750px;
   }
 }
@@ -42,4 +43,19 @@ $pink-color: var(--pink-color);
 ul {
   list-style: none;
   padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  }
 }

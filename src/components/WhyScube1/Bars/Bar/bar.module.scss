@@ -20,11 +20,32 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .progressbar {
+    & .circular {
+      width: 6rem;
+      margin: 0 auto;
+    }
+
+    & .progressbarTitle {
+      font-size: 0.85rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .progressbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & .circular {
+      width: 4rem;
+    }
+
+    & .progressbarTitle {
+      font-size: 0.7rem;
+    }
   }
 }

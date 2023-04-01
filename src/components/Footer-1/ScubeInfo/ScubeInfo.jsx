@@ -11,7 +11,9 @@ import styles from "./scubeInfo.module.scss";
 const ScubeInfo = () => {
   return (
     <div className={styles.scubeInfo}>
-      <img src="/assets/scube.png" alt="logo" />
+      <div className={styles["img-box"]}>
+        <img src="/assets/scube.png" alt="logo" />
+      </div>
       <p className="justify">
         The provider of research-based innovative intelligent solutions for
         Asynchronous e-Learning

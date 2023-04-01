@@ -18,3 +18,78 @@
     flex-wrap: wrap;
   }
 }
+
+.slider {
+  display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    display: none;
+  }
+}
+
+.grid_dot {
+  height: 10px;
+  width: 10px;
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.slice_slide {
+  :global(.slick-list) {
+    padding: 2rem 0;
+    // overflow: hidden;
+    // @include customMedia(0, 991px) {
+    //   padding: 0 !important;
+    // }
+  }
+  :global(.slick-track) {
+    border: 1px solid red;
+    padding: 2rem 0;
+    // @include customMedia(0, 991px) {
+    // width: auto !important;
+    // }
+    // > div {
+    //   padding: 0.5rem;
+    // }
+  }
+  // @include smMedia("full") {
+  //   :global(.slick-dots) {
+  //     justify-content: center !important;
+  //   }
+}
+
+:global(.slick-track) {
+  padding: 2rem 0;
+}
+
+:global(.slick-dots) {
+  li {
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  :global(.slick-active) {
+    position: relative;
+    padding: 0.25rem;
+    background-color: rgb(32, 167, 172);
+    width: 27px;
+    height: 27px;
+    & > div {
+      // background: rgb(32, 167, 172);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// rgb(32, 167, 172) 11%,
+// rgb(33, 138, 174) 49%,
+// rgb(24, 42, 115) 100%

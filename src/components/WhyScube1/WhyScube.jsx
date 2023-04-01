@@ -7,7 +7,7 @@ import styles from "./whyScube.module.scss";
 const WhyScube = () => {
   return (
     <div className={`container  ${styles["why-scube"]}`}>
-      <h2>Why Scube</h2>
+      <h2 className="section-title">Why Scube</h2>
       <div className={styles["why-scube__content"]}>
         <div>
           <Cards />

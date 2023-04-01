@@ -30,21 +30,29 @@
     display: flex;
     justify-content: space-between;
 
-    & .cards {
-      flex: 0 1 65%;
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      row-gap: 1.2rem;
+    & > div:first-child {
+      flex: 0 0 65%;
+      // width: 70%;
 
-      & > li {
-        width: 16rem;
+      & .wrapper {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      & .slider {
+        display: none;
       }
     }
 
     & .sidebar {
-      flex: 0 1 30%;
+      flex: 0 0 20%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .sidebar {
+      flex: 0 0 30%;
       display: flex;
       flex-direction: column;
 
@@ -95,6 +103,21 @@
   }
 }
 
+// @media only screen and (max-width: 1378px) {
+//   .services {
+//     &__body {
+//       & .cards {
+//         gap: 1.2rem;
+//         row-gap: 1.2rem;
+
+//         & li {
+//           width: 16rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
 @media only screen and (max-width: 1200px) {
   .services {
     &__body {
@@ -118,6 +141,18 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .services {
+    &__body {
+      & > div:first-child {
+        & .slider {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .services {
     & .events {
@@ -135,4 +170,119 @@
       margin: 0 3rem;
     }
   }
+}
+
+// .grid_dot {
+//   height: 10px;
+//   width: 10px;
+//   background: #ccc;
+//   border-radius: 1rem;
+//   position: relative;
+// }
+
+// .slice_slide {
+//   :global(.slick-list) {
+//     padding: 2rem 0;
+//     // overflow: hidden;
+//     // @include customMedia(0, 991px) {
+//     //   padding: 0 !important;
+//     // }
+//   }
+//   :global(.slick-track) {
+//     border: 1px solid red;
+//     padding: 2rem 0;
+//     // @include customMedia(0, 991px) {
+//     // width: auto !important;
+//     // }
+//     // > div {
+//     //   padding: 0.5rem;
+//     // }
+//   }
+//   // @include smMedia("full") {
+//   //   :global(.slick-dots) {
+//   //     justify-content: center !important;
+//   //   }
+// }
+
+// :global(.slick-track) {
+//   padding: 2rem 0;
+// }
+// :global(.slick-list) {
+//   width: 66%;
+//   border: 1px solid red;
+// }
+
+// :global(.slick-dots) {
+//   li {
+//     cursor: pointer;
+//     border-radius: 50%;
+//     display: flex !important;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0;
+//   }
+//   :global(.slick-active) {
+//     position: relative;
+//     padding: 0.25rem;
+//     background-color: rgb(32, 167, 172);
+//     width: 27px;
+//     height: 27px;
+//     & > div {
+//       // background: rgb(32, 167, 172);
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+// }
+
+// :global(.slick-dots) {
+//   border: 1px solid black;
+//   display: flex !important;
+//   align-items: center;
+
+//   & > .slick-active {
+//     background-color: red;
+
+//     & > div {
+//       background: rgb(32, 167, 172);
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+
+//   & > li {
+//     width: 1rem;
+//     height: 1rem;
+
+//     background-color: red;
+//   }
+// }
+
+.grid_dot {
+  height: 10px;
+  width: 10px;
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+}
+
+:global(.slick-slide) {
+  // height: 30rem !important ;
+  // margin: 0 10px;
+
+  // & > div {
+  //   display: flex;
+  // }
+}
+
+.slick-slide {
+  // margin: 0 10px;
+}
+
+:global(.slick-list) {
+  // margin: 0 -10px;
 }

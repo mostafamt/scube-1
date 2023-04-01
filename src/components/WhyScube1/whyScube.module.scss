@@ -1,29 +1,30 @@
 @import "/src/index.scss";
 
 .why-scube {
-  padding: 4rem 0 !important;
+  padding: 4rem 15px !important;
   color: #555;
+  overflow: hidden;
 
-  & > h2 {
-    font-size: 2.4rem;
-    font-weight: 300;
-    text-align: center;
-    margin: 1rem 0 4rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    letter-spacing: 6px;
-    color: #555;
+  // & > h2 {
+  //   font-size: 2.4rem;
+  //   font-weight: 300;
+  //   text-align: center;
+  //   margin: 1rem 0 4rem;
+  //   text-transform: uppercase;
+  //   letter-spacing: 1rem;
+  //   letter-spacing: 6px;
+  //   color: #555;
 
-    &:after {
-      display: block;
-      height: 2px;
-      background-color: var(--teal);
-      content: "";
-      width: 100px;
-      margin: 0 auto;
-      margin-top: 30px;
-    }
-  }
+  //   &:after {
+  //     display: block;
+  //     height: 2px;
+  //     background-color: var(--teal);
+  //     content: "";
+  //     width: 100px;
+  //     margin: 0 auto;
+  //     margin-top: 30px;
+  //   }
+  // }
 
   &__content {
     display: flex;

@@ -17,7 +17,7 @@ import {
   SliderTextMansoura,
 } from "../constants";
 
-const Header = () => {
+const Header = ({ slides }) => {
   return (
     <section id="header">
       <Swiper
@@ -30,9 +30,9 @@ const Header = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {SliderImagesMansoura.map((sliderImage, idx) => (
+        {slides.map(({ title, description, img }, idx) => (
           <SwiperSlide key={idx}>
-            <Slide imgSrc={sliderImage}>
+            <Slide imgSrc={img}>
               <Typography
                 variant="h5"
                 sx={{
@@ -42,10 +42,10 @@ const Header = () => {
                 }}
                 textAlign="center"
               >
-                {SliderHeadersMansoura[idx]}
+                {title}
               </Typography>
               <Typography sx={{ color: "#fff" }} textAlign="center">
-                {SliderTextMansoura[idx]}
+                {description}
               </Typography>
             </Slide>
           </SwiperSlide>

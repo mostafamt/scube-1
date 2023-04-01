@@ -7,6 +7,10 @@ import SchoolOutlined from "@mui/icons-material/SchoolOutlined";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import Card from "./Card/Card";
+import Slider from "react-slick";
+
+import "./slick.css";
+import "./slick-theme.css";
 
 const icons = [
   <TransformIcon />,
@@ -30,14 +34,84 @@ const texts = [
 ];
 
 const Cards = () => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    centerPadding: "120px",
+    appendDots: (dots) => (
+      <ul
+        style={{
+          listStyle: "none",
+          marginTop: "3rem",
+          right: 0,
+          bottom: "-40px",
+          display: "flex",
+          gap: ".15rem",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {dots}
+      </ul>
+    ),
+    customPaging: () => <div className={styles.grid_dot}></div>,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
   return (
-    <ul className={styles.cards}>
-      {icons.map((icon, idx) => (
-        <li key={idx}>
-          <Card icon={icons[idx]} title={titles[idx]} text={texts[idx]} />
-        </li>
-      ))}
-    </ul>
+    <div className={styles.slider}>
+      <Slider {...settings}>
+        {icons.map((icon, idx) => (
+          <div
+            key={idx}
+            style={{
+              border: "1px solid red !important",
+            }}
+          >
+            <div
+              style={{
+                height: "450px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Card icon={icons[idx]} title={titles[idx]} text={texts[idx]} />
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

@@ -25,3 +25,7 @@
     width: 100%;
   }
 }
+
+:global(.MuiInputBase-input) {
+  color: white !important;
+}

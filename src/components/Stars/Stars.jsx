@@ -14,7 +14,7 @@ const Stars = (props) => {
       }}
     >
       <div className={`container ${styles["students-box"]}`}>
-        <h2>{props.title}</h2>
+        <h2 className="section-title">{props.title}</h2>
         <div className={styles["students-body"]}>
           <div>
             <StudentCards {...props} />
