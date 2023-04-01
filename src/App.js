@@ -23,7 +23,7 @@ import "./index.scss";
 // const Group = lazy(() => import("./components/Admin/Groups/Group"));
 
 // toggle between ['znc', 'mansoura']
-const schoolName = "mansoura";
+const schoolName = "znc";
 
 function App() {
   let theme = createTheme({
