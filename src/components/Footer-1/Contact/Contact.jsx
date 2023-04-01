@@ -85,18 +85,6 @@ const Contact = ({ schoolName, to }) => {
     // znc = template_uus9gfj
     // mansoura = template_vzt8oh6
 
-    toast.success("✉️ Your email has been sent successfully", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-    resetForm();
-
     emailjs.send("service_ivverlw", templateID, form).then(
       (result) => {
         console.log(result.text);
