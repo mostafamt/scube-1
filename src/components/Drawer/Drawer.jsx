@@ -5,14 +5,14 @@ import styles from "./drawer.module.scss";
 
 import { MdClose } from "react-icons/md";
 
-const Drawer = ({ open, items, paths, clickLink }) => {
-  const [openDrawer, setOpenDrawer] = React.useState(false);
+const Drawer = ({ open, toggleDrawer, items, paths, clickLink }) => {
+  // const [openDrawer, setOpenDrawer] = React.useState(false);
 
-  React.useEffect(() => {
-    toggleDrawer();
-  }, [open]);
+  // React.useEffect(() => {
+  //   toggleDrawer();
+  // }, [open]);
 
-  const toggleDrawer = () => setOpenDrawer((prevState) => !prevState);
+  // const toggleDrawer = () => setOpenDrawer((prevState) => !prevState);
 
   const onClickLinkHandler = (path) => {
     toggleDrawer();
@@ -21,13 +21,11 @@ const Drawer = ({ open, items, paths, clickLink }) => {
 
   return (
     <>
-      {openDrawer && (
-        <div className={styles.backdrop} onClick={toggleDrawer}></div>
-      )}
+      {open && <div className={styles.backdrop} onClick={toggleDrawer}></div>}
       <div
         className={styles.drawer}
         style={{
-          transform: openDrawer ? "translateX(0%)" : "translateX(-100%)",
+          transform: open ? "translateX(0%)" : "translateX(-100%)",
         }}
       >
         <div className={styles["close-btn-box"]}>

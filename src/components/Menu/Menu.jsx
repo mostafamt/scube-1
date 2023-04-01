@@ -30,6 +30,7 @@ const Menu = ({ logo }) => {
     <>
       <Drawer
         open={openDrawer}
+        toggleDrawer={toggleDrawer}
         items={items}
         paths={paths}
         clickLink={handleClickLink}
