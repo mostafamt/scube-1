@@ -6,4 +6,23 @@
       width: 50%;
     }
   }
+
+  &__list {
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .schoolInfo {
+    & .img-box {
+      & img {
+        height: 10rem;
+        width: auto;
+      }
+    }
+  }
 }

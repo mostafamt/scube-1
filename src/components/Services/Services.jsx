@@ -59,6 +59,7 @@ const Services = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+
     appendDots: (dots) => (
       <ul
         style={{
@@ -83,6 +84,11 @@ const Services = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          speed: 1000,
+          swiper: true,
+          infinite: true,
         },
       },
       {
@@ -92,6 +98,11 @@ const Services = () => {
           slidesToScroll: 1,
           centerMode: false,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          speed: 1000,
+          swiper: true,
+          infinite: true,
         },
       },
     ],

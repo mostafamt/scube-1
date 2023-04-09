@@ -6,4 +6,34 @@
       width: 50%;
     }
   }
+
+  &__list {
+    gap: 1rem !important;
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .scubeInfo {
+    & .img-box {
+      & img {
+        height: 10rem;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .scubeInfo {
+    & .img-box {
+      & img {
+        // height: 8rem;
+      }
+    }
+  }
 }

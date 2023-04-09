@@ -20,7 +20,7 @@ const ScubeInfo = () => {
       </p>
       <div className="scube-info">
         <p>Contact Information</p>
-        <ul className="list">
+        <ul className={`list ${styles["scubeInfo__list"]} `}>
           <li>
             <LocationOnOutlined />
             6th of October City, Giza , Egypt

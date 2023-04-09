@@ -76,3 +76,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    // padding-top: 21rem !important;
+    background-position: center center;
+  }
+}

@@ -16,7 +16,7 @@ const SchoolInfo = ({ info }) => {
       <div className={styles["img-box"]}>
         <img src={img} alt="school-logo" />
       </div>
-      <ul className="list">
+      <ul className={`list ${styles["schoolInfo__list"]}`}>
         <li>
           <LocationOnOutlined />
           {address}

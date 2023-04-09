@@ -29,3 +29,9 @@
 :global(.MuiInputBase-input) {
   color: white !important;
 }
+
+@media only screen and (max-width: 1200px) {
+  .contact {
+    padding-bottom: 4rem;
+  }
+}

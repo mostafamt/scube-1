@@ -12,28 +12,9 @@ import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
 
-const icons = [
-  <TransformIcon />,
-  <SchoolOutlined />,
-  <AdjustIcon />,
-  <BarChartIcon />,
-];
+const Cards = (props) => {
+  const { cards } = props;
 
-const titles = [
-  "Shifting from Teaching to Learning",
-  "Adaptive and Personalized learning",
-  "Designed with Students at the Center",
-  "Analytics and Academic Advising",
-];
-
-const texts = [
-  "The focus is on supporting students during studying and Learning, no more memorization nor rote learning, but rather understanding and fun leaning",
-  "No more private teachers.  The system plays the role of the private teacher and presents lessons customized and adapted differently for each student",
-  "Learning is becoming fun.  No more tears, but only joy and fun",
-  "Parents & Techers will have a close eye to the student's progress, while the system will offer auto academic advising",
-];
-
-const Cards = () => {
   const settings = {
     dots: true,
     infinite: false,
@@ -66,6 +47,11 @@ const Cards = () => {
           slidesToScroll: 1,
           centerMode: false,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          speed: 1000,
+          swiper: true,
+          infinite: true,
         },
       },
       {
@@ -75,6 +61,11 @@ const Cards = () => {
           slidesToScroll: 1,
           centerMode: false,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          speed: 1000,
+          swiper: true,
+          infinite: true,
         },
       },
       {
@@ -84,6 +75,11 @@ const Cards = () => {
           slidesToScroll: 1,
           centerMode: false,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          speed: 1000,
+          swiper: true,
+          infinite: true,
         },
       },
     ],
@@ -92,21 +88,10 @@ const Cards = () => {
   return (
     <div className={styles.slider}>
       <Slider {...settings}>
-        {icons.map((icon, idx) => (
-          <div
-            key={idx}
-            style={{
-              border: "1px solid red !important",
-            }}
-          >
-            <div
-              style={{
-                height: "450px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Card icon={icons[idx]} title={titles[idx]} text={texts[idx]} />
+        {cards.map((card, idx) => (
+          <div key={idx}>
+            <div className={styles["card-wrapper"]}>
+              <Card icon={card.icon} title={card.title} text={card.text} />
             </div>
           </div>
         ))}
