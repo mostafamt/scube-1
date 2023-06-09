@@ -9,22 +9,22 @@
   }
 
   & > div:nth-child(2) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   flex-wrap: wrap;
 
-    & > div {
-      flex: 0 0 40%;
-      overflow: hidden;
-    }
+    //   & > div {
+    //     flex: 0 0 40%;
+    //     overflow: hidden;
+    //   }
 
-    & > div:first-child {
-      flex: 0 0 25%;
-    }
+    //   & > div:first-child {
+    //     flex: 0 0 25%;
+    //   }
 
-    & > div:last-child {
-      flex: 0 0 25%;
-    }
+    //   & > div:last-child {
+    //     flex: 0 0 25%;
+    //   }
   }
 }
 

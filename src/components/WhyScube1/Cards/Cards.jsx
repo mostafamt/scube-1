@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./cards.module.scss";
+import styles from './cards.module.scss';
 
-import TransformIcon from "@mui/icons-material/Transform";
-import SchoolOutlined from "@mui/icons-material/SchoolOutlined";
-import AdjustIcon from "@mui/icons-material/Adjust";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import Card from "./Card/Card";
-import Slider from "react-slick";
+import TransformIcon from '@mui/icons-material/Transform';
+import SchoolOutlined from '@mui/icons-material/SchoolOutlined';
+import AdjustIcon from '@mui/icons-material/Adjust';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import Card from './Card/Card';
+import Slider from 'react-slick';
 
-import "./slick.css";
-import "./slick-theme.css";
+import './slick.css';
+import './slick-theme.css';
+import { Link } from 'react-router-dom';
 
 const Cards = (props) => {
   const { cards } = props;
@@ -21,18 +22,18 @@ const Cards = (props) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    centerPadding: "120px",
+    centerPadding: '120px',
     appendDots: (dots) => (
       <ul
         style={{
-          listStyle: "none",
-          marginTop: "3rem",
+          listStyle: 'none',
+          marginTop: '3rem',
           right: 0,
-          bottom: "-40px",
-          display: "flex",
-          gap: ".15rem",
-          justifyContent: "center",
-          alignItems: "center",
+          bottom: '-40px',
+          display: 'flex',
+          gap: '.15rem',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         {dots}
@@ -88,13 +89,25 @@ const Cards = (props) => {
   return (
     <div className={styles.slider}>
       <Slider {...settings}>
-        {cards.map((card, idx) => (
-          <div key={idx}>
-            <div className={styles["card-wrapper"]}>
-              <Card icon={card.icon} title={card.title} text={card.text} />
-            </div>
-          </div>
-        ))}
+        {cards.map((card, idx) => {
+          if (card?.to) {
+            return (
+              <div key={idx}>
+                <Link to={card?.to} className={styles['card-wrapper']}>
+                  <Card icon={card.icon} title={card.title} text={card.text} />
+                </Link>
+              </div>
+            );
+          } else {
+            return (
+              <div key={idx}>
+                <div className={styles['card-wrapper']}>
+                  <Card icon={card.icon} title={card.title} text={card.text} />
+                </div>
+              </div>
+            );
+          }
+        })}
       </Slider>
     </div>
   );

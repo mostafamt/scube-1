@@ -15,9 +15,13 @@
     color: #fff;
     overflow: hidden;
 
-    & img {
+    & > a {
       height: 100%;
-      padding: 0.5rem 0;
+
+      & > img {
+        height: 100%;
+        padding: 0.5rem 0;
+      }
     }
 
     & a {

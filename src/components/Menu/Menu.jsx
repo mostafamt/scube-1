@@ -41,7 +41,10 @@ const Menu = ({ logo }) => {
             <button className={styles["sandwich"]} onClick={toggleDrawer}>
               <RiMenu2Line />
             </button>
-            <img src="/assets/scube.png" alt="logo" />
+            <Link to="/">
+              <img src="/assets/scube.png" alt="logo" />
+            </Link>
+
             <ul>
               {items.map((el, idx) => (
                 <li key={idx}>
@@ -49,7 +52,13 @@ const Menu = ({ logo }) => {
                 </li>
               ))}
             </ul>
-            <img src={logo} alt="mansoura-logo" className={styles["man-img"]} />
+            {logo && (
+              <img
+                src={logo}
+                alt="mansoura-logo"
+                className={styles["man-img"]}
+              />
+            )}
             <div className={styles.loginBox}>
               <button onClick={() => navigate("/login")}>
                 <span>Login </span>

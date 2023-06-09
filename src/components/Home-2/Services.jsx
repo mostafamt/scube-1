@@ -50,12 +50,12 @@ const Services = () => {
             <Grid container spacing={4}>
               {serviceCardIcons.map((icon, idx) => (
                 <Grid key={idx} item xs={4}>
-                  <ServicesCard
+                  {/* <ServicesCard
                     className="service-card"
                     icon={icon}
                     title={serviceCardHeaders[idx]}
                     text={serviceCardTexts[idx]}
-                  />
+                  /> */}
                 </Grid>
               ))}
             </Grid>

@@ -7,20 +7,30 @@ import {
 } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
-// import Layout from "../src/components/Layout/Layout";
+import Layout from "../src/components/Layout/Layout";
 import Home from "./components/Home-2/Home";
 // import Home from "./components/Home-1/Home";
 import "./styles.css";
 
 import "./index.scss";
+import Shifting from "./components/Home-2/WhyPages/Shifting/Shifting";
+import Adaptive from "./components/Home-2/WhyPages/Adaptive/Adaptive";
+import Designed from "./components/Home-2/WhyPages/Designed/Designed";
+import Analytics from "./components/Home-2/WhyPages/Analytics/Analytics";
+import StudyRoom from "./components/Home-2/ServicesPages/StudyRoom/StudyRoom";
+import InteractiveLearning from "./components/Home-2/ServicesPages/InteractiveLearning/InteractiveLearning";
+import FavoriteLanguage from "./components/Home-2/ServicesPages/FavoriteLanguage/FavoriteLanguage";
+import FunLearning from "./components/Home-2/ServicesPages/FunLearning/FunLearning";
+import Follow from "./components/Home-2/ServicesPages/Follow/Follow";
+import Knowledge from "./components/Home-2/ServicesPages/Knowledge/Knowledge";
 
-// const Login = lazy(() => import("./components/Auth/Login"));
-// const PageNotFound = lazy(() =>
-//   import("./components/PageNotFound/PageNotFound")
-// );
-// const Profile = lazy(() => import("./components/Profile/Profile"));
-// const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
-// const Group = lazy(() => import("./components/Admin/Groups/Group"));
+const Login = lazy(() => import("./components/Auth/Login"));
+const PageNotFound = lazy(() =>
+  import("./components/PageNotFound/PageNotFound")
+);
+const Profile = lazy(() => import("./components/Profile/Profile"));
+const Groups = lazy(() => import("./components/Admin/Groups/Groups"));
+const Group = lazy(() => import("./components/Admin/Groups/Group"));
 
 // toggle between ['znc', 'mansoura']
 const schoolName = "mansoura";
@@ -42,7 +52,7 @@ function App() {
           <Route path="/" element={<Home schoolName={schoolName} />} />
           <Route path="/home" element={<Home schoolName={schoolName} />} />
 
-          {/* <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
 
           <Route
             path="/profile"
@@ -68,7 +78,21 @@ function App() {
               </Layout>
             }
           />
-          <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="/shifting" element={<Shifting />} />
+          <Route path="/adaptive" element={<Adaptive />} />
+          <Route path="/designed" element={<Designed />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/study-room" element={<StudyRoom />} />
+          <Route
+            path="/interactive-learning"
+            element={<InteractiveLearning />}
+          />
+          <Route path="/favorite-language" element={<FavoriteLanguage />} />
+          <Route path="/fun-learning" element={<FunLearning />} />
+          <Route path="/follow" element={<Follow />} />
+          <Route path="/knowledge" element={<Knowledge />} />
+
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </ThemeProvider>

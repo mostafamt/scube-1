@@ -39,6 +39,15 @@ const serviceCardTexts = [
   "End-of-Term Review Platform (LXE) allows you to ask the system a question and it will reply automatically, or you put your question for either the teacher or your colleagues answer.  Teachers can place the exam review questions with answers, or leaving the answers to the students",
 ];
 
+const tos = [
+  "/study-room",
+  "/interactive-learning",
+  "/favorite-language",
+  "/fun-learning",
+  "/follow",
+  "/knowledge",
+];
+
 const CardsContainer = () => {
   return (
     <div className={styles.wrapper}>
@@ -48,6 +57,7 @@ const CardsContainer = () => {
             icon={serviceCardIcons[idx]}
             title={serviceCardHeaders[idx]}
             text={card}
+            to={tos[idx]}
           />
         </div>
       ))}

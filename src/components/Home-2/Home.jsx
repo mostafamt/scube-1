@@ -17,6 +17,7 @@ import WhyScube from "../WhyScube1/WhyScube";
 import Students from "../Students/Students";
 import Teachers from "../Teachers/Teachers";
 import Garden from "../Garden/Garden";
+import { Routes } from "react-router-dom";
 
 const mansoura = {
   logo: "/assets/mansoura-logo.png",
@@ -150,8 +151,64 @@ const znc = {
   },
 };
 
+const scube = {
+  logo: null,
+  slides: [
+    {
+      title: "One Size Does Not Fit All",
+      description:
+        "Students come from a variety of backgrounds, cultures, schools, and learning abilities, so we cannot think that one curriculum, or one pair of pants, can fit all",
+      img: "/static/images/3.png",
+    },
+    {
+      title: "Private Tutoring",
+      description:
+        "One-on-One (private) tutoring increases performance to around 98% in a standard classroom [Bloom,1984]",
+      img: "/static/images/2.png",
+    },
+    {
+      title: "SCube is Different",
+      description:
+        "Delivers Personalized teaching strategies to match each learner’s learning style Merged FSLSM + Kolb’s models (Scube Model)",
+      img: "/static/images/4.png",
+    },
+    {
+      title: "Get the maximum value",
+      description:
+        "The teacher is with you in the classroom for teaching and SCube goes with you to home for studying and learning",
+      img: "/assets/idea-1.jpg",
+    },
+    {
+      title:
+        "With the Adaptive/Personalized Learning of SCube، No more Private Tutoring",
+      description:
+        "SCube is the First e-Learning Platform that considers the individual learning differences for each learner",
+      img: "/assets/idea-3.jpg",
+    },
+    {
+      title: "Use your favorite language",
+      description:
+        "Use your favorite language when studying, SCube translates automatically",
+      img: "/assets/idea-4.jpg",
+    },
+  ],
+  message: {
+    img: "/static/images/header3.png",
+    messages: [
+      "SCube for Education Technology is an Egyptian LLC Company that develops Smart Software Solutions (S3). SCube has developed several registered branded technologies and products. SCube has a strong committed, qualified, and aligned R&D team. Research-based innovative intelligent solutions is our business charter, and Asynchronous e-Learning is our focused domain of work.",
+    ],
+    signature: null,
+    vision:
+      "To empower students to be future leaders to serve the community and keep the Egyptian identity.",
+    mission:
+      "We inspire and nurture students to be creative, critical thinkers and decision makers. Children will rise to be the challenge of life responsibly, confidently and ethically.",
+  },
+  info: false,
+};
+
 const Home = ({ schoolName }) => {
-  const data = schoolName === "znc" ? znc : mansoura;
+  const data = scube;
+  // const data = schoolName === 'znc' ? znc : mansoura;
 
   return (
     <>
@@ -160,9 +217,13 @@ const Home = ({ schoolName }) => {
       <WhyScube />
       <Message message={data.message} />
       <Services />
-      <Students />
-      <Garden />
-      <Teachers />
+      {data !== scube && (
+        <>
+          <Students />
+          <Garden />
+          <Teachers />
+        </>
+      )}
       <Footer1 schoolName={schoolName} info={data.info} />
     </>
   );

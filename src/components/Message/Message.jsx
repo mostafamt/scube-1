@@ -1,7 +1,7 @@
-import React from "react";
-import { Box, Container, Grid, Tab, Tabs, Typography } from "@mui/material";
+import React from 'react';
+import { Box, Container, Grid, Tab, Tabs, Typography } from '@mui/material';
 
-import styles from "./message.module.scss";
+import styles from './message.module.scss';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -26,7 +26,7 @@ function TabPanel(props) {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
   };
 }
 
@@ -44,16 +44,19 @@ const Message = ({ message }) => {
       <div className={`container ${styles.message}`}>
         <h2 className="section-title">Our Message</h2>
 
-        <div className={styles["message-body"]}>
+        <div className={styles['message-body']}>
           <div>
             <img src={img} alt="" />
             <div>
               {messages.map((message, idx) => (
                 <p key={idx}>{message}</p>
               ))}
-              <p>
-                {signature.gender} <strong>{signature.name}</strong> , Principal
-              </p>
+              {signature && (
+                <p>
+                  {signature.gender} <strong>{signature.name}</strong> ,
+                  Principal
+                </p>
+              )}
             </div>
           </div>
           <div className={styles.story}>
@@ -63,7 +66,7 @@ const Message = ({ message }) => {
               <Box
                 sx={{
                   borderBottom: 1,
-                  borderColor: "divider",
+                  borderColor: 'divider',
                 }}
               >
                 <Tabs
@@ -81,14 +84,14 @@ const Message = ({ message }) => {
                 sx={{
                   padding: 0,
                   margin: 0,
-                  textAlign: "justify",
-                  height: "6rem",
+                  textAlign: 'justify',
+                  height: '6rem',
                 }}
               >
-                <Typography textAlign={"justify"}>{vision}</Typography>
+                <Typography textAlign={'justify'}>{vision}</Typography>
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Typography textAlign={"justify"}>{mission}</Typography>
+                <Typography textAlign={'justify'}>{mission}</Typography>
               </TabPanel>
             </div>
           </div>
