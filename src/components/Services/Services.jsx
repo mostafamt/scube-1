@@ -26,7 +26,7 @@ const serviceCardIcons = [
 ];
 
 const serviceCardHeaders = [
-  "Smart Study Room",
+  "Smart Study Room in your favorite language",
   "Interactive Learning",
   "Study in Your Favorite Language",
   "Fun Learning with Games",

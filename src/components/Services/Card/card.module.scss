@@ -1,22 +1,23 @@
 @import "/src/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
 .card {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 25rem;
+  width: 25rem;
   background-color: #fff;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
 
   & > div:first-child {
     & > svg {
       font-size: 3.4rem;
-      stroke: #fff;
+      // stroke: #fff;
       fill: $teal-color;
     }
   }
@@ -26,33 +27,40 @@
     text-transform: uppercase;
     font-size: 1.4rem;
     text-align: center;
+    color: black;
+    // font-family: "Outfit", "Robot";
+    // font-weight: 700;
+    font-size: 1.2rem;
   }
 
   & p {
     text-align: justify;
+    // font-family: "Outfit", "Robot";
+    // font-weight: 500;
+    // color: white;
   }
 
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  & > div:last-child {
+  & > a {
     margin-top: auto;
-    align-self: flex-start;
+    text-decoration: none;
+    color: white;
+    // border: 1px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: $teal-color;
 
-    & > a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #000;
-      text-decoration: none;
-      text-transform: capitalize;
-      font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 300ms;
 
-      & > span:last-child > svg {
-        transform: translateY(4px);
-        fill: $teal-color;
-      }
+    &:hover {
+      background-color: white;
+      color: $teal-color;
+      gap: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      transition: gap 300ms;
     }
   }
 }

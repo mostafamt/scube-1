@@ -16,7 +16,7 @@ const Knowledge = () => {
           textAlign: "center",
         }}
       >
-        <h1>Follow</h1>
+        <h1>Knowledge</h1>
       </div>
 
       <Footer />

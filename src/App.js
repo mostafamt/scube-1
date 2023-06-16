@@ -18,11 +18,12 @@ import Adaptive from "./components/Home-2/WhyPages/Adaptive/Adaptive";
 import Designed from "./components/Home-2/WhyPages/Designed/Designed";
 import Analytics from "./components/Home-2/WhyPages/Analytics/Analytics";
 import StudyRoom from "./components/Home-2/ServicesPages/StudyRoom/StudyRoom";
-import InteractiveLearning from "./components/Home-2/ServicesPages/InteractiveLearning/InteractiveLearning";
-import FavoriteLanguage from "./components/Home-2/ServicesPages/FavoriteLanguage/FavoriteLanguage";
+import SmartBook from "./components/Home-2/ServicesPages/SmartBook/SmartBook";
 import FunLearning from "./components/Home-2/ServicesPages/FunLearning/FunLearning";
-import Follow from "./components/Home-2/ServicesPages/Follow/Follow";
 import Knowledge from "./components/Home-2/ServicesPages/Knowledge/Knowledge";
+import AdaptiveLearning from "./components/Home-2/ServicesPages/PersonalizedLearning/PersonalizedLearning";
+import PersonalizedLearning from "./components/Home-2/ServicesPages/PersonalizedLearning/PersonalizedLearning";
+import Follow from "./components/Home-2/ServicesPages/Follow/Follow";
 
 const Login = lazy(() => import("./components/Auth/Login"));
 const PageNotFound = lazy(() =>
@@ -82,13 +83,14 @@ function App() {
           <Route path="/adaptive" element={<Adaptive />} />
           <Route path="/designed" element={<Designed />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/study-room" element={<StudyRoom />} />
+
           <Route
-            path="/interactive-learning"
-            element={<InteractiveLearning />}
+            path="/personalized-learning"
+            element={<PersonalizedLearning />}
           />
-          <Route path="/favorite-language" element={<FavoriteLanguage />} />
+          <Route path="/study-room" element={<StudyRoom />} />
           <Route path="/fun-learning" element={<FunLearning />} />
+          <Route path="/smart-book" element={<SmartBook />} />
           <Route path="/follow" element={<Follow />} />
           <Route path="/knowledge" element={<Knowledge />} />
 

@@ -60,10 +60,10 @@ const Menu = ({ logo }) => {
               />
             )}
             <div className={styles.loginBox}>
-              <button onClick={() => navigate("/login")}>
+              <a href="https://portal.scube-edutech.com/login">
                 <span>Login </span>
                 <FiLogIn />
-              </button>
+              </a>
             </div>
           </div>
         </div>

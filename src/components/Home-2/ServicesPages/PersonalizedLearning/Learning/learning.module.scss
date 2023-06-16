@@ -1,0 +1,49 @@
+.learning {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+
+  & > div {
+    flex: 0 1 33%;
+
+    &:nth-child(2) {
+      flex: 0 1 23%;
+    }
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    & .card {
+      display: flex;
+      gap: 1rem;
+
+      & div:first-child {
+        font-size: 4.375rem;
+        font-weight: 600;
+        color: #c2c2c2c2;
+      }
+
+      & div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+        text-align: left;
+
+        & > h4 {
+          margin: 0;
+          font-size: 1.2rem;
+        }
+
+        & > p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

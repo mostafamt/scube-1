@@ -1,0 +1,96 @@
+@import "../../../index.scss";
+
+.new-services {
+  & h2 {
+    text-align: center;
+    font-family: "Outfit", "Roboto";
+    font-weight: 700;
+    font-size: 3rem;
+
+    & > span:first-child {
+      color: #ff7f00;
+    }
+
+    & > span:last-child {
+      color: var(--teal-color);
+    }
+  }
+
+  & .sidebar {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+
+    & h2 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    & .events {
+      position: relative;
+      flex: 0 1 50%;
+      z-index: 3;
+    }
+
+    & ul {
+      & li {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        & svg {
+          height: 1.25rem;
+          width: 1.25rem;
+          color: #fff;
+          background-color: $teal-color;
+          border-radius: 5px;
+          margin-right: 0.5rem;
+          font-size: 1.2rem;
+          padding: 0.2rem;
+          -webkit-transition: background-image 2s ease-in-out;
+          transition: background-image 2s ease-in-out;
+
+          &:hover {
+            background-image: linear-gradient(
+              180deg,
+              rgb(255, 186, 17) 11%,
+              rgb(255, 168, 11) 49%,
+              rgb(255, 151, 6) 100%
+            );
+            -webkit-transition: background-image 2s ease-in-out;
+            transition: background-image 2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+:global(.slick-dots) {
+  display: flex !important;
+  justify-content: center;
+
+  & > li {
+    width: 1rem;
+    height: 1rem;
+
+    & > button::before {
+      font-size: 50px;
+    }
+
+    &:hover {
+      & > button:before {
+        color: $teal-color;
+      }
+    }
+  }
+
+  & :global(.slick-active) {
+    & > button:before {
+      color: $teal-color !important;
+    }
+  }
+}

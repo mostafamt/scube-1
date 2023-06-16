@@ -9,19 +9,33 @@
   color: #555;
   overflow: hidden;
 
+  & > h2 {
+    text-align: center;
+    font-family: "Outfit", "Robot";
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 0;
+    color: black;
+
+    & > span {
+      color: $teal-color;
+    }
+  }
+
   &-body {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     & > div:first-child {
       flex: 0 1 65%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 2.5rem;
 
       & > img {
-        width: 16rem;
+        width: 20rem;
         // align-self: flex-start;
       }
 
@@ -41,7 +55,7 @@
 
     & > div:last-child {
       flex: 0 1 30%;
-
+      height: 30rem;
       & > h2 {
         font-size: 1.3rem;
         text-transform: uppercase;
@@ -87,6 +101,7 @@
         text-align: center;
         width: 100%;
         padding: 0 1rem;
+        height: auto;
 
         & .tabs {
           & > div:nth-child(1) {

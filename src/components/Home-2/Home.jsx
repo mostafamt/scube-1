@@ -18,6 +18,7 @@ import Students from "../Students/Students";
 import Teachers from "../Teachers/Teachers";
 import Garden from "../Garden/Garden";
 import { Routes } from "react-router-dom";
+import NewServices from "./NewServices/NewServices";
 
 const mansoura = {
   logo: "/assets/mansoura-logo.png",
@@ -158,12 +159,12 @@ const scube = {
       title: "One Size Does Not Fit All",
       description:
         "Students come from a variety of backgrounds, cultures, schools, and learning abilities, so we cannot think that one curriculum, or one pair of pants, can fit all",
-      img: "/static/images/3.png",
+      img: "/static/images/3.jpg",
     },
     {
-      title: "Private Tutoring",
+      title: "No More Private Tutoring",
       description:
-        "One-on-One (private) tutoring increases performance to around 98% in a standard classroom [Bloom,1984]",
+        "SCube is the First e-Learning Platform that considers the individual learning differences for each learner",
       img: "/static/images/2.png",
     },
     {
@@ -179,13 +180,6 @@ const scube = {
       img: "/assets/idea-1.jpg",
     },
     {
-      title:
-        "With the Adaptive/Personalized Learning of SCube، No more Private Tutoring",
-      description:
-        "SCube is the First e-Learning Platform that considers the individual learning differences for each learner",
-      img: "/assets/idea-3.jpg",
-    },
-    {
       title: "Use your favorite language",
       description:
         "Use your favorite language when studying, SCube translates automatically",
@@ -199,9 +193,9 @@ const scube = {
     ],
     signature: null,
     vision:
-      "To empower students to be future leaders to serve the community and keep the Egyptian identity.",
+      "Our vision is to initiate and lead the science of Intelligent e- Learning and to pioneer and constantly grow to become the lead exporter of innovative Intelligent e-Learning technologies worldwide, and to become a leading performer in the competitive global marketplace of developing Intelligent solutions for the equitable access of lifelong learners (LLL) including those vulnerable and underserved.",
     mission:
-      "We inspire and nurture students to be creative, critical thinkers and decision makers. Children will rise to be the challenge of life responsibly, confidently and ethically.",
+      "Our mission is to provide our customers with high quality innovative intelligent solutions with maximized cost- benefit and expedited ROI via improving the Efficiency, Efficacy, and Engagement of the Learning systems. Our work processes and products lifecycle seamlessly integrate research and development for continuously exploring new innovative improvements and ideas to guarantee continuous evolution of the learning systems, while our products follow the contemporary theories and paradigm shifts to guarantee a top-level satisfaction of our end- users (the learners).",
   },
   info: false,
 };
@@ -216,7 +210,8 @@ const Home = ({ schoolName }) => {
       <Header slides={data.slides} />
       <WhyScube />
       <Message message={data.message} />
-      <Services />
+      <NewServices />
+      {/* <Services /> */}
       {data !== scube && (
         <>
           <Students />

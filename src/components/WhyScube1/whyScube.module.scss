@@ -5,6 +5,19 @@
   color: #555;
   overflow: hidden;
 
+  & > h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Outfit", "Roboto";
+    margin-top: 0;
+    color: black;
+
+    & > span {
+      color: $teal-color;
+    }
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
