@@ -1,0 +1,38 @@
+.model {
+  background-color: #f1f1f1;
+  padding: 1rem 2rem;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    & ul {
+      & > li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &::before {
+          content: " ";
+          display: block;
+          width: 0.5rem;
+          height: 3px;
+          background-color: #555;
+        }
+      }
+    }
+
+    &:last-child {
+      & > img {
+        width: 30rem;
+        height: auto;
+      }
+    }
+  }
+}

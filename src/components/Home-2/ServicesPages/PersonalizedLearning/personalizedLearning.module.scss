@@ -1,0 +1,26 @@
+@import "../../../../index.scss";
+
+.personalized-learning {
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.25rem;
+  color: #555;
+
+  & > div {
+    & > h1 {
+      text-align: center;
+      font-family: "Outfit", "Roboto";
+      font-weight: 700;
+      color: black;
+
+      & > span:first-child {
+        color: #ff7f00;
+      }
+
+      & > span:last-child {
+        color: $teal-color;
+      }
+    }
+  }
+}

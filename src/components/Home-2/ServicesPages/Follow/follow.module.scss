@@ -1,0 +1,150 @@
+@import "../../../../index.scss";
+
+.follow {
+  background-color: white;
+  overflow: hidden;
+  font-size: 1.25rem;
+  color: #555;
+
+  & > div {
+    & h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Outfit", "Roboto";
+      text-align: center;
+      color: #0e0e0e;
+
+      & > span:first-child {
+        color: $teal-color;
+      }
+
+      & > span:last-child {
+        color: #ff7f00;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+
+    & > ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        // text-transform: uppercase;
+        font-weight: 600;
+
+        & > svg {
+          fill: $teal-color;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    & > div {
+      & > h2 {
+        text-align: center;
+        color: black;
+
+        &::after {
+          content: " ";
+          display: block;
+          width: 8rem;
+          height: 2px;
+          background-color: $teal-color;
+          margin: 1rem auto;
+        }
+      }
+
+      & > ul {
+        display: flex;
+
+        & > li {
+          flex: 0 0 50%;
+
+          & > h4 {
+            margin: 0;
+            margin-bottom: 0.5rem;
+          }
+
+          & > ul {
+            padding-left: 1.5rem;
+            & > li {
+              &::before {
+                content: " ";
+                display: block;
+                width: 0.75rem;
+                height: 0.75rem;
+                border-radius: 50%;
+                background-color: $teal-color;
+              }
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+      & > p {
+        &::before {
+          content: " ";
+          display: block;
+          width: 0.75rem;
+          height: 0.75rem;
+          border-radius: 50%;
+          background-color: $teal-color;
+        }
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    margin: 3rem auto;
+    & .learner-needs {
+      & > h2 {
+        text-align: center;
+        color: black;
+
+        &::after {
+          content: " ";
+          display: block;
+          width: 8rem;
+          height: 2px;
+          background-color: $teal-color;
+          margin: 1rem auto;
+        }
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        & > div {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 32%;
+          // border: 1px solid black;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          //   rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          //   rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          border-radius: 1rem;
+          padding: 2rem;
+          display: flex;
+          justify-content: space-between;
+
+          & > img {
+            height: 25rem;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
